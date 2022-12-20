@@ -1,0 +1,37 @@
+## Title: CompanionsCompanion
+## Description: Adds helpful information to the companion overview window
+## Author: AnotherORC
+## APIVersion: 101036
+## AddOnVersion: 100
+## Version: 2.1
+## SavedVariables: CompanionsCompanionVars
+## DependsOn: LibAddonMenu-2.0
+
+lang/en.lua
+lang/$(language).lua
+
+ui/CC.xml
+ui/ResetDialog.xml
+
+scenes/keyboard/rapport/companionrapport_good_keyboard.lua
+scenes/keyboard/rapport/companionrapport_good_keyboard.xml
+
+scenes/keyboard/companionrapport_keyboard.lua
+scenes/keyboard/companionrapport_keyboard.xml
+
+scenes/gamepad/companionrapport_gamepad.lua
+scenes/gamepad/companionrapport_gamepad.xml
+scenes/gamepad/companionrapport_good_rapport.lua
+scenes/gamepad/companionrapport_good_rapport.xml
+
+libs/Timer.lua
+libs/CompanionData.lua
+libs/Library.lua
+
+utils/EventManager.lua
+utils/NotificationManager.lua
+utils/CooldownManager.lua
+utils/DataManager.lua
+
+CC.lua
+AddonSettingMenu.lua

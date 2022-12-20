@@ -1,0 +1,19 @@
+<GuiXml>
+    <Controls>
+        <TopLevelControl name="CC_CompanionRapoortGood_Panel_Keyboard" hidden="true">
+
+            <Dimensions x="615" y="690" />
+            <Anchor point="RIGHT" relativeTo="GuiRoot" offsetY="32" />
+
+            <OnInitialized>
+                CC_CompanionRapportGood_Keyboard_OnInitialize(self)
+            </OnInitialized>
+
+            <Controls>
+                
+
+            </Controls>
+
+        </TopLevelControl>
+    </Controls>
+</GuiXml>

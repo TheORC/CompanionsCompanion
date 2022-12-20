@@ -1,0 +1,76 @@
+<GuiXml>
+    <Controls>
+        <Control name="CC_RapportPanel" inherits="ZO_ScrollContainer" tier="HIGH" virtual="true">
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)"   offsetX="0" offsetY="400"/>
+            <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="$(parent)" offsetX="0" offsetY="400"/>
+            <Dimensions y="250" />
+            <OnInitialized>
+                ZO_Scroll_Initialize(self)
+             </OnInitialized>
+            <Controls>
+                <Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop">
+                    <AnchorFill/>
+                </Backdrop>
+            </Controls>
+        </Control>
+
+        <Control name="CC_InfoPanel" virtual="true">
+            <Anchor point="TOPLEFT"  relativeTo="$(parent)" relativePoint="TOPLEFT"  offsetX="0" offsetY="0"/>
+            <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT" offsetX="0" offsetY="0"/>
+            <OnInitialized>
+                self:SetResizeToFitDescendents(true)
+            </OnInitialized>
+            <Controls>
+
+                <Label name="$(parent)Title" font="ZoFontHeader" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_NORMAL" text="SI_OUTFIT_SELECTOR_TITLE" verticalAlignment="CENTER" horizontalAlignmen="LEFT">
+                    <Anchor point="TOPLEFT"  relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="5" offsetY="10"/>
+                    <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT" offsetY="10"/>
+                </Label>
+
+                <Control name="$(parent)Values">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)Title" relativePoint="BOTTOMLEFT" offsetY="5"/>
+                    <Anchor point="TOPRIGHT" relativeTo="$(parent)Title" relativePoint="BOTTOMRIGHT" offsetY="5"/>
+                </Control>
+            </Controls>
+        </Control>
+
+        <Control name="CC_RapportContainer" virtual="true">
+            <OnInitialized>
+                self:SetResizeToFitDescendents(true)
+            </OnInitialized>
+            <Controls>
+                <Label name="$(parent)Label" font="ZoFontHeader" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED">
+                    <Anchor point="LEFT" relativeTo="$(parent)" relativePoint="LEFT" offsetX="0"/>
+                    <Dimensions x="450"/>
+                    <OnInitialized>
+                        self:SetWrapMode(TEXT_WRAP_MODE_ELLIPSIS)
+                    </OnInitialized>
+                </Label>
+
+                <Button name="$(parent)ReminderBtn" color="" inherits="ZO_DefaultButton">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)Label" relativePoint="TOPRIGHT" offsetX="0"/>
+                    <Dimensions x="80" y="35" />
+                    <Controls>
+                        <Label name="$(parent)Text" font="ZoFontGameLargeBold" color="f0f8ff">
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$(parent)" offsetX="0" offsetY="0" />
+                        </Label>
+                    </Controls>
+                </Button>
+
+                <Label name="$(parent)Countdown" font="ZoFontWinT2" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED">
+                    <Anchor point="TOP" relativeTo="$(parent)ReminderBtn" relativePoint="BOTTOM" offsetY="0"/>
+                    <Dimensions x="100"/>
+                    <OnInitialized>
+                        self:SetWrapMode(TEXT_WRAP_MODE_ELLIPSIS)
+                        self:SetHorizontalAlignment(TEXT_ALIGN_CENTER)
+                    </OnInitialized>
+                </Label>
+            </Controls>
+        </Control>
+
+        <Control name="CC_Divider" inherits="ZO_WideHorizontalDivider" virtual="true">
+            <Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="BOTTOMLEFT" offsetY="5"/>
+            <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="BOTTOMRIGHT" offsetY="5"/>
+        </Control>
+    </Controls>
+</GuiXml>

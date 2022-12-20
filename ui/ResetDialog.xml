@@ -1,0 +1,23 @@
+<GuiXml>
+  <Controls>
+  <TopLevelControl name="CCResetDialog" inherits="ZO_CustomDialogBase">
+    <Dimensions x="800" y="225"/>
+    <Anchor point="CENTER" offsetY="-45"/>
+    <Controls>
+      <Control name="$(parent)Content" inherits="ZO_DialogContentAnchors">
+        <Controls>
+          <Label name="$(parent)NameLabel" font="ZoFontGame" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED" horizontalAlignment="CENTRE">
+            <Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT"/>
+            <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT"/>
+            <OnInitialized>
+                self:SetText(GetString(CC_RESET_MODAL_DESCRIPTION))
+            </OnInitialized>
+          </Label>
+        </Controls>
+      </Control>
+      <Control name="$(parent)Cancel" inherits="ZO_CustomDialogButton"/>
+      <Control name="$(parent)Accept" inherits="ZO_CustomDialogButton"/>
+    </Controls>
+  </TopLevelControl>
+  </Controls>
+</GuiXml>
