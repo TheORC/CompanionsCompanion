@@ -4,7 +4,6 @@ local englishStrings = {
         UI Gamepad
     ]]
     CC_UI_RAPPORT_TITLE = "Rapport",
-    CC_UI_TIMER_START   = "Start Timer",
 
     --[[
         General
@@ -66,13 +65,13 @@ local englishStrings = {
         Isobel
     ]]
     -- Good
-    CC_GOOD_ISOBEL_TEXT_2 = "Complete a daily Undaunted quest for Bolgrul",
-    CC_GOOD_ISOBEL_TEXT_3 = "Complete a daily High Isle world boss quest",
-    CC_GOOD_ISOBEL_TEXT_4 = "Kill a world boss",
-    CC_GOOD_ISOBEL_TEXT_6 = "Kill a boss-type Daedra (e.g. Harvester)",
-    CC_GOOD_ISOBEL_TEXT_7 = "Kill Daedra",
-    CC_GOOD_ISOBEL_TEXT_8 = "Craft sweet food (e.g. grape preserves)",
-    CC_GOOD_ISOBEL_TEXT_9 = "Craft anything at a blacksmithing station",
+    CC_GOOD_ISOBEL_TEXT_2  = "Complete a daily Undaunted quest for Bolgrul",
+    CC_GOOD_ISOBEL_TEXT_3  = "Complete a daily High Isle world boss quest",
+    CC_GOOD_ISOBEL_TEXT_4  = "Kill a world boss",
+    CC_GOOD_ISOBEL_TEXT_6  = "Kill a boss-type Daedra (e.g. Harvester)",
+    CC_GOOD_ISOBEL_TEXT_7  = "Kill Daedra",
+    CC_GOOD_ISOBEL_TEXT_8  = "Craft sweet food (e.g. grape preserves)",
+    CC_GOOD_ISOBEL_TEXT_9  = "Craft anything at a blacksmithing station",
     CC_GOOD_ISOBEL_TEXT_10 = "Complete a Volcanic Vent in High Isle",
     CC_GOOD_ISOBEL_TEXT_11 = "Visit an Undaunted Enclave",
     CC_GOOD_ISOBEL_TEXT_12 = "Talk to Dagerfall Covenant leader King Emeric",
@@ -171,9 +170,30 @@ local englishStrings = {
     CC_BAD_EMBER_TEXT_3  = "Get caught trespassing",
     CC_BAD_EMBER_TEXT_4  = "Get killed by a guard",
     CC_BAD_EMBER_TEXT_5  = "Start fishing",
+
+    ------------------------
+    -- Settings Menu Text --
+    ------------------------
+
+    CC_SETTINGS_TITLE                  = "About",
+    CC_SETTINGS_MENU_DESCRIPTION       = "This addon adds rapport information to the companion overview screen.  It also adds notification timers which when set will notify you after the allotted time.\n\nThanks to @NextTuesday for help with the English translation.\n\nThanks to @Baryzard for the French translation.  PM me if you would like to see this addon support your own language.",
+    CC_SETTINGS_NOTIFICATION_SECTION   = "Notification Options",
+    CC_SETTINGS_CHAT_REMINDER_NAME     = "Send reminder to chat",
+    CC_SETTINGS_CHAT_REMINDER_TOOLTIP  = "Should the reminder be sent to your chat box?",
+    CC_SETTINGS_NOTIFICATION_NAME      = "Send reminder to screen",
+    CC_SETTINGS_NOTIFICATION_TOOLTIP   = "Should the reminder popup on your screen?",
+    CC_SETTINGS_OTHER_SECTION          = "Other Options",
+    CC_SETTINGS_OTHER_TIMER_S_NAME     = "Notify on timer start",
+    CC_SETTINGS_OTHER_TIMER_S_TOOLTIP  = "When you start a timer, should a message be sent to your chat?",
+    CC_SETTINGS_OTHER_TIMER_R_NAME     = "Notify on timer reset",
+    CC_SETTINGS_OTHER_TIMER_R_TOOLTIP  = "When you reset a timer, should a message be sent to your chat?",
+    CC_SETTINS_OTHER_COUNTDOWN_NAME    = "Show countdowns",
+    CC_SETTINS_OTHER_COUNTDOWN_TOOLTIP = "Shows the time remaining before a notification.",
+    
 }
 
 -- Load all the english words in as default
 for index, value in pairs(englishStrings) do
     ZO_CreateStringId(index, value)
+    SafeAddVersion(index, 1)
 end
