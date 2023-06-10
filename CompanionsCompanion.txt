@@ -1,9 +1,9 @@
 ## Title: CompanionsCompanion
 ## Description: Adds helpful information to the companion overview window
 ## Author: AnotherORC
-## APIVersion: 101036
+## APIVersion: 101038
 ## AddOnVersion: 100
-## Version: 2.1.1
+## Version: 2.2.1
 ## SavedVariables: CompanionsCompanionVars
 ## DependsOn: LibAddonMenu-2.0
 

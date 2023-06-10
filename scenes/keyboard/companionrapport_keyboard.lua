@@ -340,7 +340,13 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
 
         local companionId      = CC_Libs.GetCompanionId()
         local companionRapport = CC_GetCompanionRapport(companionId)
-        local statusList       = self.rapportSelectedStatus == RAPPORT_STATS.GOOD and companionRapport.good or companionRapport.bad
+
+        -- Do nothing if the companion data can't be found
+        if (companionRapport == nil) then
+            return
+        end
+
+        local statusList = self.rapportSelectedStatus == RAPPORT_STATS.GOOD and companionRapport.good or companionRapport.bad
         
         local previous
         for _, rapportData in ipairs(statusList) do

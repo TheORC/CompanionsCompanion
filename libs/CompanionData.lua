@@ -540,6 +540,193 @@ local CC_COMPANION_DATA = {
             },
         }
     },
+    [11113] = { -- Sharp-As-Night
+        good = {
+            {
+                text = CC_SHARED_COMPLETE_PERSONAL_QUEST,
+                time = CC_UNKNOWN_TIME,
+                rapport = 500,
+            },
+            {
+                text = CC_SHARED_COMPLETE_ASHLANDER_DAILY,
+                time = CC_UNKNOWN_TIME,
+                rapport = 125,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_6,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_1,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_7,
+                time = CC_UNKNOWN_TIME,
+                rapport = 4,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_8,
+                time = CC_UNKNOWN_TIME,
+                rapport = 4,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_9,
+                time = CC_UNKNOWN_TIME,
+                rapport = 4,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_3,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_4,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_5,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_2,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            }
+        },
+        bad = {
+            {
+                text = CC_BAD_SHARP_TEXT_2,
+                time = CC_UNKNOWN_TIME,
+                rapport = 10,
+            },
+            {
+                text = CC_BAD_SHARP_TEXT_3,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_BAD_SHARP_TEXT_4,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_BAD_SHARP_TEXT_1,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+        }
+    },
+    [11114] = { -- Azandar Al-Cybiades
+        good = {
+            {
+                text = CC_SHARED_COMPLETE_PERSONAL_QUEST,
+                time = CC_UNKNOWN_TIME,
+                rapport = 500,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_1,
+                time = CC_UNKNOWN_TIME,
+                rapport = 125,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_2,
+                time = CC_UNKNOWN_TIME,
+                rapport = 10,
+            },
+            {
+                text = CC_SHARED_LOOTING_PSIJIC_PORTAL,
+                time = CC_5_MINUTES,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_3,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_4,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_5,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_6,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_7,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_8,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_9,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_10,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_11,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_12,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_13,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_14,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_15,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            }
+        },
+        bad = {
+            {
+                text = CC_BAD_AZANDAR_TEXT_1,
+                time = CC_UNKNOWN_TIME,
+                rapport = 10,
+            },
+            {
+                text = CC_BAD_AZANDAR_TEXT_2,
+                time = CC_5_MINUTES,
+                rapport = 1,
+            },
+            {
+                text = CC_BAD_AZANDAR_TEXT_3,
+                time = CC_5_MINUTES,
+                rapport = 1,
+            },
+        }
+    },
 }
 
 --- Get the id of a rapport object

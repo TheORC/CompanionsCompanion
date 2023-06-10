@@ -59,6 +59,7 @@ local englishStrings = {
     CC_SHARED_DARK_BROTHERHOOD           = "Enter the Dark Brotherhood Sanctuary in the Gold Coast",
     CC_SHARED_USE_BLADE_OF_WOE_NPC       = "Use the Blade of Woe on any NPC",
     CC_SHARED_COMPLETE_MAGES_DAILY       = "Complete a daily Mages Guild quest",
+    CC_SHARED_COMPLETE_ASHLANDER_DAILY   = "Complete a daily Ashlander hunt quest",
     CC_SHARED_LOOTING_PSIJIC_PORTAL      = "Loot a Psijic portal",
 
     --[[
@@ -134,8 +135,6 @@ local englishStrings = {
     CC_GOOD_MIRRI_TEXT_17 = "Read a book from a bookshelf", -- 5:34pm -6:36 -7:36 -9:44 >2hour
     CC_GOOD_MIRRI_TEXT_18 = "Summon the Daemon Chicken non-combat pet", -- TODO
 
-    -- TODO blade of woe
-
     -- Bad
     CC_BAD_MIRRI_TEXT_1 = "Complete a Dark Brotherhood Black Sacrament quest",
     CC_BAD_MIRRI_TEXT_2 = "Collect a torchbug or butterfly",
@@ -170,6 +169,53 @@ local englishStrings = {
     CC_BAD_EMBER_TEXT_3  = "Get caught trespassing",
     CC_BAD_EMBER_TEXT_4  = "Get killed by a guard",
     CC_BAD_EMBER_TEXT_5  = "Start fishing",
+
+    --[[
+        Sharp-As-Night
+    ]]
+
+    -- Good
+    CC_GOOD_SHARP_TEXT_1 = "Loot a heavy sack",
+    CC_GOOD_SHARP_TEXT_2 = "Repair gear (including using a repair kit)",
+    CC_GOOD_SHARP_TEXT_3 = "Harvest an alchemy material",
+    CC_GOOD_SHARP_TEXT_4 = "Start fishing",
+    CC_GOOD_SHARP_TEXT_5 = "Catch a non-common fish",
+    CC_GOOD_SHARP_TEXT_6 = "Visit Vvardenfell",
+    CC_GOOD_SHARP_TEXT_7 = "Visit Blackwood",
+    CC_GOOD_SHARP_TEXT_8 = "Visit Shadowfen",
+    CC_GOOD_SHARP_TEXT_9 = "Visit Hew's Bane",
+
+    -- Bad
+    CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
+    CC_BAD_SHARP_TEXT_2 = "Willingly pay a bounty when accosted by a guard",
+    CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger",
+    CC_BAD_SHARP_TEXT_4 = "Destorying an item from inventory",
+
+    --[[
+        Azandar Al-Cybiades
+    ]]
+
+    -- Good
+    CC_GOOD_AZANDAR_TEXT_1 = "Complete a daily enchanting master writ quest",
+    CC_GOOD_AZANDAR_TEXT_2 = "Visit any mundus stone",
+    CC_GOOD_AZANDAR_TEXT_3 = "Scry for an antiquity",
+    CC_GOOD_AZANDAR_TEXT_4 = "Finding a lead",
+    CC_GOOD_AZANDAR_TEXT_5 = "Finding a new lorebook",
+    CC_GOOD_AZANDAR_TEXT_6 = "Activating an Ayleid well",
+    CC_GOOD_AZANDAR_TEXT_7 = "Read any book",
+    CC_GOOD_AZANDAR_TEXT_8 = "Craft any tea",
+    CC_GOOD_AZANDAR_TEXT_9 = "Kill mudcrabs",
+    CC_GOOD_AZANDAR_TEXT_10 = "Kill Dreughs",
+    CC_GOOD_AZANDAR_TEXT_11 = "Kill Chaurus",
+    CC_GOOD_AZANDAR_TEXT_12 = "Kill Ogres",
+    CC_GOOD_AZANDAR_TEXT_13 = "Kill Trolls",
+    CC_GOOD_AZANDAR_TEXT_14 = "Kill Harpies",
+    CC_GOOD_AZANDAR_TEXT_15 = "Kill Nix-oxen",
+
+    -- Bad
+    CC_BAD_AZANDAR_TEXT_1 = "Visting Artaeum or Eyevea",
+    CC_BAD_AZANDAR_TEXT_2 = "Crafting any coffee", -- > 4
+    CC_BAD_AZANDAR_TEXT_3 = "Harvesting any mushroom",
 
     ------------------------
     -- Settings Menu Text --
