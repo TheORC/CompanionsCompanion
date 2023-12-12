@@ -14,7 +14,7 @@ local CC = {}
 CC_SETTINGS = {
     NAME         = "CompanionsCompanion",
     DISPLAY_NAME = "Companions Companion",
-    VERSION      = "v2.1",
+    VERSION      = "v2.2.1",
     AUTHOR       = "AnotherORC",
     CHAT_PREFIX  = "|cB759FF[CC]: |cFFFFFF",
     CHAT_SUFFIX  = "|r",
@@ -81,7 +81,6 @@ function CC_StartRapportTimer(rapportId)
         CC_Libs.m(zo_strformat(CC_CHAT_TIMER_START, rapportText, timeText))
     end
 end
-
 
 ---Gets the id of an active timer from it's registered event id.
 ---This method returns nil if no active timer is found.
