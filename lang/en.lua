@@ -176,35 +176,36 @@ local englishStrings = {
 
     -- Good
     CC_GOOD_SHARP_TEXT_1 = "Loot a heavy sack",
-    CC_GOOD_SHARP_TEXT_2 = "Repair gear (including using a repair kit)",
+    CC_GOOD_SHARP_TEXT_2 = "Repair gear (including recharging weapon)", -- > 20 ?
     CC_GOOD_SHARP_TEXT_3 = "Harvest an alchemy material",
     CC_GOOD_SHARP_TEXT_4 = "Start fishing",
     CC_GOOD_SHARP_TEXT_5 = "Catch a non-common fish",
     CC_GOOD_SHARP_TEXT_6 = "Visit Vvardenfell",
     CC_GOOD_SHARP_TEXT_7 = "Visit Blackwood",
-    CC_GOOD_SHARP_TEXT_8 = "Visit Shadowfen",
-    CC_GOOD_SHARP_TEXT_9 = "Visit Hew's Bane",
+    CC_GOOD_SHARP_TEXT_8 = "Visit Hew's Bane",
 
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
     CC_BAD_SHARP_TEXT_2 = "Willingly pay a bounty when accosted by a guard",
-    CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger",
-    CC_BAD_SHARP_TEXT_4 = "Destorying an item from inventory",
+    CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger", -- > 20
+    CC_BAD_SHARP_TEXT_4 = "Destorying an item from inventory", -- > 20
 
     --[[
         Azandar Al-Cybiades
     ]]
 
     -- Good
-    CC_GOOD_AZANDAR_TEXT_1 = "Complete a daily enchanting master writ quest",
-    CC_GOOD_AZANDAR_TEXT_2 = "Visit any mundus stone",
-    CC_GOOD_AZANDAR_TEXT_3 = "Scry for an antiquity",
-    CC_GOOD_AZANDAR_TEXT_4 = "Finding a lead",
-    CC_GOOD_AZANDAR_TEXT_5 = "Finding a new lorebook",
-    CC_GOOD_AZANDAR_TEXT_6 = "Activating an Ayleid well",
-    CC_GOOD_AZANDAR_TEXT_7 = "Read any book",
-    CC_GOOD_AZANDAR_TEXT_8 = "Craft any tea",
-    CC_GOOD_AZANDAR_TEXT_9 = "Kill mudcrabs",
+    CC_GOOD_AZANDAR_TEXT_1  = "Complete a daily enchanting master writ quest",
+    CC_GOOD_AZANDAR_TEXT_16 = "Complete a daily quest for Ordinator Tilena in Necrom",
+    CC_GOOD_AZANDAR_TEXT_2  = "Visit any mundus stone",
+    CC_GOOD_AZANDAR_TEXT_3  = "Scry for an antiquity",
+    CC_GOOD_AZANDAR_TEXT_17 = "Blade of Woe an innocent",
+    CC_GOOD_AZANDAR_TEXT_4  = "Finding a lead",
+    CC_GOOD_AZANDAR_TEXT_5  = "Finding a new lorebook",
+    CC_GOOD_AZANDAR_TEXT_6  = "Activating an Ayleid well",
+    CC_GOOD_AZANDAR_TEXT_7  = "Read any book",
+    CC_GOOD_AZANDAR_TEXT_8  = "Craft any tea",
+    CC_GOOD_AZANDAR_TEXT_9  = "Kill mudcrabs",
     CC_GOOD_AZANDAR_TEXT_10 = "Kill Dreughs",
     CC_GOOD_AZANDAR_TEXT_11 = "Kill Chaurus",
     CC_GOOD_AZANDAR_TEXT_12 = "Kill Ogres",
