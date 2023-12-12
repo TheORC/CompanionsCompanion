@@ -1,0 +1,22 @@
+{
+  "name": "companionscompanion",
+  "version": "2.2.1",
+  "description": "Provides additional information about your companions rapport in an easy to access location.",
+  "type": "module",
+  "scripts": {
+    "release": "cross-env ENVIRONMENT=deploy node ./utils/build.js",
+    "build": "cross-env ENVIRONMENT=development node ./utils/build.js",
+    "watch-dev": "watch \"npm run build\" ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "watch": "^0.13.0"
+  },
+  "dependencies": {
+    "@alumna/reflect": "^1.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "zip-a-folder": "^3.1.5"
+  }
+}

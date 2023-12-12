@@ -1,4 +1,3 @@
-
 ----------------------------------
 -- Companion Rapport Information
 ---------------------------------
@@ -760,7 +759,7 @@ function CC_GetRapportId(rapport)
     return rapport.text
 end
 
---- Gets the rapport object from the provided id.  
+--- Gets the rapport object from the provided id.
 --- If no object is found this function returns null
 ---@param rapportId number
 ---@return table|nil
@@ -784,4 +783,3 @@ end
 function CC_GetCompanionRapport(companionId)
     return CC_COMPANION_DATA[companionId]
 end
-
