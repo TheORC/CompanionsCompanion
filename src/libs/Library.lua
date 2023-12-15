@@ -21,10 +21,11 @@ end
 --[[
     Method used for outputting messages to the chat
 ]]
-function CC_Libs.m(value)
+function CC_Libs.m(value, chatColor)
     local output = {}
 
     table.insert(output, CC_SETTINGS.CHAT_PREFIX)
+    table.insert(output, chatColor)
     table.insert(output, value)
     table.insert(output, CC_SETTINGS.CHAT_SUFFIX)
 
@@ -51,12 +52,12 @@ end
     Converts seconds in to text friedly format
 ]]
 function CC_Libs.SecondsToReadibleFormat(seconds)
-    local timeMinutes = seconds     / 60
+    local timeMinutes = seconds / 60
     local timeHours   = timeMinutes / 60
     local isMinutes   = timeMinutes < 50
 
-    local abbString = ZO_AbbreviateAndLocalizeNumber(isMinutes and timeMinutes or timeHours, 0, false)
-    local timeUnit  = GetString(isMinutes and CC_TIME_MINUTES or CC_TIME_HOURS)
+    local abbString   = ZO_AbbreviateAndLocalizeNumber(isMinutes and timeMinutes or timeHours, 0, false)
+    local timeUnit    = GetString(isMinutes and CC_TIME_MINUTES or CC_TIME_HOURS)
 
     return zo_strformat(CC_TIME_STRING, abbString, timeUnit)
 end
@@ -88,7 +89,7 @@ local CC_TIME_TABLE = {
 
 --[[
     TODO: Remove this from here.
-    Returns the number of seconds 
+    Returns the number of seconds
 ]]
 function CC_Libs.CC_ConvertStringToSeconds(timerId)
     return CC_TIME_TABLE[timerId]
