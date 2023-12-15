@@ -28,11 +28,14 @@ local englishStrings = {
     --[[
         Time
     ]]
-    CC_TIME_STRING                       = "Reminder in <<1>> <<2>>", -- Format of time strings e.g. 2 hours
+    CC_TIME_STRING                       = "Reminder in <<1>> <<2>> <<3>> <<4>>", -- Format of time strings e.g. 2 hours
+    CC_TIME_SECONDS                      = "seconds",
     CC_TIME_MINUTES                      = "minutes",
     CC_TIME_HOURS                        = "hours",
+    CC_TIME_DAYS                         = "days",
 
     CC_UNKNOWN_TIME                      = "unknown",
+    CC_1_MINUTES                         = "1 minute",
     CC_2_MINUTES                         = "2 minutes",
     CC_3_MINUTES                         = "3 minutes",
     CC_5_MINUTES                         = "5 minutes",

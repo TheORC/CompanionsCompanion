@@ -602,7 +602,7 @@ local CC_COMPANION_DATA = {
             },
             {
                 text = CC_GOOD_SHARP_TEXT_2,
-                time = CC_10_MINUTES,
+                time = CC_1_MINUTES,
                 rapport = 1,
             },
             {

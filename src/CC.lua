@@ -21,6 +21,17 @@ CC_SETTINGS = {
     CHAT_SUFFIX  = "|r",
 }
 
+---List of interactionId maped to their timerIds.
+local INTERACTION_TIMERS = {}
+
+---Gets the id of an active timer from it's registered event id.
+---This method returns nil if no active timer is found.
+---@param interactionId integer
+---@return integer|nil
+function CC_GetTimerId(interactionId)
+    return INTERACTION_TIMERS[interactionId]
+end
+
 ---Get the cooldown time of a rapport object from it's id in seconds.
 ---@param interactionId number
 ---@return number|nil
@@ -71,6 +82,7 @@ function CC_StartRapportTimer(interactionId)
     -- Create the new timer test
     local timer       = CC_TIMER_MANAGER:CreateNewTimer(timerData)
     CC_STORAGE_MANAGER:AddTimer(timer:GetId(), timer:GetData())
+    INTERACTION_TIMERS[interactionId] = timer:GetId()
 
     -- Send the start information to the chat
     if CC_STORAGE_MANAGER:GetSetting(CC_SETTING_OPTIONS.START_NOTIFICATION) then
@@ -89,33 +101,9 @@ end
 ---Removes the timer object for the interaction id.
 ---@param interactionId any
 function CC_RemoveInteractionTimer(interactionId)
-    local timerId = CC_GetTimerId(interactionId)
-    if timerId == nil then return end
-
-    CC_TIMER_MANAGER:StopTimer(timerId)
+    local timerId = INTERACTION_TIMERS[interactionId]
     CC_STORAGE_MANAGER:RemoveTimer(timerId)
-end
-
----Gets the id of an active timer from it's registered event id.
----This method returns nil if no active timer is found.
----@param interactionId integer
----@return integer|nil
-function CC_GetTimerId(interactionId)
-    -- There are no timers
-    if #CC_TIMER_MANAGER:GetTimerList() == 0 then
-        return nil
-    end
-
-    -- Loop through all the active timers
-    for timerId, timer in pairs(CC_TIMER_MANAGER:GetTimerList()) do
-        -- Check to see if this timer is for the provided event
-        if timer ~= nil and timer:GetData() ~= nil and timer:GetData().interactionId == interactionId then
-            -- Return the timer
-            return timerId
-        end
-    end
-
-    return nil
+    INTERACTION_TIMERS[interactionId] = nil
 end
 
 ---Method called called when a companions rapport changes.
@@ -245,11 +233,12 @@ local function CreateCompanionDataFrame()
     COMPANION_RAPPORT_KEYBOARD_SCENE:AddFragment(COMPANION_RAPPORT_KEYBOARD_FRAGMENT)
 end
 
+---Loads all stored timers and adds them to the timer manager.
 local function LoadTimersFromStorage()
     local timers = CC_STORAGE_MANAGER:GetTimerList()
 
     for timerId, timerData in pairs(timers) do
-        local timerData = {
+        local timer = {
             interactionId = timerData.interactionId,
             companionId   = timerData.companionId,
             endTime       = timerData.endTime,
@@ -264,7 +253,8 @@ local function LoadTimersFromStorage()
         }
 
         -- Load the timer
-        CC_TIMER_MANAGER:RestoreTimer(timerId, timerData)
+        local restoredTimer = CC_TIMER_MANAGER:RestoreTimer(timerId, timer)
+        INTERACTION_TIMERS[timerData.interactionId] = restoredTimer:GetId()
     end
 end
 
