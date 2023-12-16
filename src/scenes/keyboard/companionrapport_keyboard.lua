@@ -375,8 +375,7 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
 
         -- Get a list of rapport items and their respective timers
         local rapportList, timerList = CC_COMPANION_DATA_MANAGER:GetRapportTimeComponents(interactionId)
-
-        poolObject:SetData({
+        local interactionData        = {
             status       = self.rapportSelectedStatus,
             title        = string.format("%s", GetString(rapportData.text)),
             raportAmount = rapportList,
@@ -398,7 +397,8 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
                     poolObject:SetTimerButtonText(GetString(CC_CANCEL_BTN))
                 end
             end
-        })
+        }
+        poolObject:SetData(interactionData)
 
         -- Check if there is an interaction cooldown
         local rapportTime = CC_GetRapportTime(interactionId)

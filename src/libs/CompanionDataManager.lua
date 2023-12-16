@@ -764,14 +764,22 @@ local CC_RAPPORT_LIST = {}
 ---Give each companions rapport item a unique identifier.
 local function SetupRapportIds()
     local id = 1
-    for characterId, characterRapport in pairs(CC_COMPANION_DATA) do
-        for rapportType, rapportList in pairs(characterRapport) do
-            for rapportIndex, _ in pairs(rapportList) do
-                CC_COMPANION_DATA[characterId][rapportType][rapportIndex]['id'] = id
-                CC_RAPPORT_LIST[id] = CC_COMPANION_DATA[characterId][rapportType][rapportIndex]
-                id = id + 1
-            end
+
+    ---Assings a unique id to each of
+    ---@param characterId any
+    ---@param rapportType any
+    ---@param interactionList any
+    local function AssignIds(characterId, rapportType, interactionList)
+        for rapportIndex, interactionData in pairs(interactionList) do
+            CC_COMPANION_DATA[characterId][rapportType][rapportIndex]['id'] = id
+            CC_RAPPORT_LIST[id] = CC_COMPANION_DATA[characterId][rapportType][rapportIndex]
+            id = id + 1
         end
+    end
+
+    for characterId, characterRapport in pairs(CC_COMPANION_DATA) do
+        AssignIds(characterId, "good", characterRapport.good)
+        AssignIds(characterId, "bad", characterRapport.bad)
     end
 end
 
