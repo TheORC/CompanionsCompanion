@@ -238,23 +238,29 @@ local function LoadTimersFromStorage()
     local timers = CC_STORAGE_MANAGER:GetTimerList()
 
     for timerId, timerData in pairs(timers) do
-        local timer = {
-            interactionId = timerData.interactionId,
-            companionId   = timerData.companionId,
-            endTime       = timerData.endTime,
-            endCallBack   = function()
-                CC_COMPANION_CALLBACK_MANAGER:FireCallbacks(CC_TIMER_EVENTS.CC_TIMER_FINISHED, timerData.interactionId,
-                    timerData.companionId)
-            end,
-            tickCallback  = function(timer)
-                -- Still runing, tick
-                CC_COMPANION_CALLBACK_MANAGER:FireCallbacks(CC_TIMER_EVENTS.CC_TIMER_TICK, timer)
-            end
-        }
+        -- This is an old event.  We will need to remove it gracefully.
+        if timerData.eventId ~= nil then
+            CC_STORAGE_MANAGER:RemoveTimer(timerId)
+        else
+            local timer = {
+                interactionId = timerData.interactionId,
+                companionId   = timerData.companionId,
+                endTime       = timerData.endTime,
+                endCallBack   = function()
+                    CC_COMPANION_CALLBACK_MANAGER:FireCallbacks(CC_TIMER_EVENTS.CC_TIMER_FINISHED,
+                        timerData.interactionId,
+                        timerData.companionId)
+                end,
+                tickCallback  = function(timer)
+                    -- Still runing, tick
+                    CC_COMPANION_CALLBACK_MANAGER:FireCallbacks(CC_TIMER_EVENTS.CC_TIMER_TICK, timer)
+                end
+            }
 
-        -- Load the timer
-        local restoredTimer = CC_TIMER_MANAGER:RestoreTimer(timerId, timer)
-        INTERACTION_TIMERS[timerData.interactionId] = restoredTimer:GetId()
+            -- Load the timer
+            local restoredTimer = CC_TIMER_MANAGER:RestoreTimer(timerId, timer)
+            INTERACTION_TIMERS[timerData.interactionId] = restoredTimer:GetId()
+        end
     end
 end
 
