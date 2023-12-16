@@ -123,7 +123,9 @@ local function OnRapportUpdate(_, companionId, previousRapport, currentRapport, 
             message = GetString(CC_CHAT_LOST_RAPPORT)
         end
 
-        CC_Libs.m(zo_strformat(message, GetCompanionName(companionId), adjustmentAmountType), "|c959695")
+        -- Calculate the change in rapport
+        local rapportChange = math.abs(currentRapport - previousRapport)
+        CC_Libs.m(zo_strformat(message, GetCompanionName(companionId), rapportChange), "|c959695")
     end
 end
 
