@@ -1,6 +1,8 @@
 ----------------------------------
 -- Companion Rapport Information
 ---------------------------------
+
+---Table containing all the compaion rapport information
 local CC_COMPANION_DATA = {
     [9912] = { -- Isobel Veloise
         good = {
@@ -547,6 +549,11 @@ local CC_COMPANION_DATA = {
                 rapport = 500,
             },
             {
+                text = CC_GOOD_SHARP_TEXT_9,
+                time = CC_20_HOURS,
+                rapport = 125,
+            },
+            {
                 text = CC_SHARED_COMPLETE_ASHLANDER_DAILY,
                 time = CC_20_HOURS,
                 rapport = 125,
@@ -751,35 +758,114 @@ local CC_COMPANION_DATA = {
     },
 }
 
---- Get the id of a rapport object
----
---- @param rapport table
---- @return number
-function CC_GetRapportId(rapport)
-    return rapport.text
+---List of rapport items in order
+local CC_RAPPORT_LIST = {}
+
+---Give each companions rapport item a unique identifier.
+local function SetupRapportIds()
+    local id = 1
+
+    ---Assings a unique id to each of
+    ---@param characterId any
+    ---@param rapportType any
+    ---@param interactionList any
+    local function AssignIds(characterId, rapportType, interactionList)
+        for rapportIndex, interactionData in pairs(interactionList) do
+            CC_COMPANION_DATA[characterId][rapportType][rapportIndex]['id'] = id
+            CC_RAPPORT_LIST[id] = CC_COMPANION_DATA[characterId][rapportType][rapportIndex]
+            id = id + 1
+        end
+    end
+
+    for characterId, characterRapport in pairs(CC_COMPANION_DATA) do
+        AssignIds(characterId, "good", characterRapport.good)
+        AssignIds(characterId, "bad", characterRapport.bad)
+    end
 end
 
---- Gets the rapport object from the provided id.
---- If no object is found this function returns null
+local CC_CompanionDataManager = ZO_InitializingObject:Subclass()
+
+---Performs the nessesery setup up on the rapport information
+function CC_CompanionDataManager:Initialize()
+    SetupRapportIds()
+end
+
+---Get the unique identifier for the requsted rapport object.
+---@param rapport table
+---@return number
+function CC_CompanionDataManager:GetRapportId(rapport)
+    return rapport.id
+end
+
+---Get the rapport data from it's unqiue identifier.  If none can be found, nill is returned.
 ---@param rapportId number
 ---@return table|nil
-function CC_GetRapportFromId(rapportId)
-    for _, characterRapport in pairs(CC_COMPANION_DATA) do
-        for _, rapportList in pairs(characterRapport) do
-            for _, rapport in pairs(rapportList) do
-                if rapport.text == rapportId then -- The rapport text id is the rapport id.
-                    return rapport
-                end
-            end
+function CC_CompanionDataManager:GetRapportData(rapportId)
+    return CC_RAPPORT_LIST[rapportId]
+end
+
+---Gets the rapport interaction text id.
+---@param rapportId number
+---@return number|nil
+function CC_CompanionDataManager:GetInteractionName(rapportId)
+    local rapportData = self:GetRapportData(rapportId)
+
+    if rapportData == nil then
+        return nil
+    end
+
+    return rapportData.text
+end
+
+---Get a rapport and time list for a given rapport.
+---Each rapport interaction has the ability to have different rapport values and timers.  This
+---function will return both the rapport amounts and timers for the rapport interaction
+---provided.
+---@param rapportId any
+---@return table|nil
+---@return table|nil
+function CC_CompanionDataManager:GetRapportTimeComponents(rapportId)
+    local rapportData = self:GetRapportData(rapportId)
+
+    if rapportData == nil then
+        return nil, nil
+    end
+
+    -- List of rapport/timers
+    local rapportList = {}
+    local timeList    = {}
+
+    if CC_Libs.is_array(rapportData.rapport) then
+        for i, value in ipairs(rapportData.rapport) do
+            table.insert(rapportList, value)
+            table.insert(timeList, GetString(rapportData.time[i]))
         end
+    else
+        table.insert(rapportList, rapportData.rapport)
+        table.insert(timeList, GetString(rapportData.time))
+    end
+
+    return rapportList, timeList
+end
+
+---Get a list of a companions good rapport options.
+---@param companionId number
+---@return table|nil
+function CC_CompanionDataManager:GetCompanionGoodRaport(companionId)
+    if CC_COMPANION_DATA[companionId] ~= nil then
+        return CC_COMPANION_DATA[companionId].good
     end
     return nil
 end
 
---- Returns a list of associatated rapport object from the companion
--- with the provided id.
+---Get a list of a companions bad rapport options.
 ---@param companionId number
----@return table
-function CC_GetCompanionRapport(companionId)
-    return CC_COMPANION_DATA[companionId]
+---@return table|nil
+function CC_CompanionDataManager:GetCompanionBadRaport(companionId)
+    if CC_COMPANION_DATA[companionId] ~= nil then
+        return CC_COMPANION_DATA[companionId].bad
+    end
+    return nil
 end
+
+CC_COMPANION_DATA_MANAGER = CC_CompanionDataManager:New()

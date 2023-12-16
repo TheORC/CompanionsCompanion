@@ -1,5 +1,5 @@
 local englishStrings = {
-    
+
     --[[
         UI Gamepad
     ]]
@@ -28,11 +28,14 @@ local englishStrings = {
     --[[
         Time
     ]]
-    CC_TIME_STRING                       = "Reminder in <<1>> <<2>>", -- Format of time strings e.g. 2 hours
+    CC_TIME_STRING                       = "Reminder in <<1>> <<2>> <<3>> <<4>>", -- Format of time strings e.g. 2 hours
+    CC_TIME_SECONDS                      = "seconds",
     CC_TIME_MINUTES                      = "minutes",
     CC_TIME_HOURS                        = "hours",
+    CC_TIME_DAYS                         = "days",
 
     CC_UNKNOWN_TIME                      = "unknown",
+    CC_1_MINUTES                         = "1 minute",
     CC_2_MINUTES                         = "2 minutes",
     CC_3_MINUTES                         = "3 minutes",
     CC_5_MINUTES                         = "5 minutes",
@@ -51,16 +54,16 @@ local englishStrings = {
     CC_SHARED_BASTIAN_MIRRI              = "at 1500 and 2800 rapport",
     CC_ONCE_PER_PERSONAL_QUEST           = "once per personal quest",
     CC_SHARED_ISOBEL_EMBER_QUEST_RAPPORT = "at 1500, 2750, and 4000 rapport",
-    
+
     --[[
         Shared
     ]]
-    CC_SHARED_COMPLETE_PERSONAL_QUEST    = "Complete a personal quest",
-    CC_SHARED_DARK_BROTHERHOOD           = "Enter the Dark Brotherhood Sanctuary in the Gold Coast",
-    CC_SHARED_USE_BLADE_OF_WOE_NPC       = "Use the Blade of Woe on any NPC",
-    CC_SHARED_COMPLETE_MAGES_DAILY       = "Complete a daily Mages Guild quest",
-    CC_SHARED_COMPLETE_ASHLANDER_DAILY   = "Complete a daily Ashlander hunt quest",
-    CC_SHARED_LOOTING_PSIJIC_PORTAL      = "Loot a Psijic portal",
+    CC_SHARED_COMPLETE_PERSONAL_QUEST  = "Complete a personal quest",
+    CC_SHARED_DARK_BROTHERHOOD         = "Enter the Dark Brotherhood Sanctuary in the Gold Coast",
+    CC_SHARED_USE_BLADE_OF_WOE_NPC     = "Use the Blade of Woe on any NPC",
+    CC_SHARED_COMPLETE_MAGES_DAILY     = "Complete a daily Mages Guild quest",
+    CC_SHARED_COMPLETE_ASHLANDER_DAILY = "Complete a daily Ashlander hunt quest",
+    CC_SHARED_LOOTING_PSIJIC_PORTAL    = "Loot a Psijic portal",
 
     --[[
         Isobel
@@ -84,9 +87,9 @@ local englishStrings = {
     CC_GOOD_ISOBEL_TEXT_18 = "Summon the Druadach Mountain Dog or Bravil Retriever non-combat pets",
 
     -- Bad
-    CC_BAD_ISOBEL_TEXT_1 = "Kill an innocent NPC",
-    CC_BAD_ISOBEL_TEXT_2 = "Steal, loot a Thieves Trove, or loot the corpse of an innocent NPC",
-    CC_BAD_ISOBEL_TEXT_3 = "Enter an Outlaws Refuge or the Abah's Landing Thieves Den",
+    CC_BAD_ISOBEL_TEXT_1   = "Kill an innocent NPC",
+    CC_BAD_ISOBEL_TEXT_2   = "Steal, loot a Thieves Trove, or loot the corpse of an innocent NPC",
+    CC_BAD_ISOBEL_TEXT_3   = "Enter an Outlaws Refuge or the Abah's Landing Thieves Den",
 
 
     --[[
@@ -132,7 +135,7 @@ local englishStrings = {
     CC_GOOD_MIRRI_TEXT_14 = "Kill a goblin",
     CC_GOOD_MIRRI_TEXT_15 = "Kill a snake (including critters)",
     CC_GOOD_MIRRI_TEXT_16 = "Craft an alcoholic beverage",
-    CC_GOOD_MIRRI_TEXT_17 = "Read a book from a bookshelf", -- 5:34pm -6:36 -7:36 -9:44 >2hour
+    CC_GOOD_MIRRI_TEXT_17 = "Read a book from a bookshelf",             -- 5:34pm -6:36 -7:36 -9:44 >2hour
     CC_GOOD_MIRRI_TEXT_18 = "Summon the Daemon Chicken non-combat pet", -- TODO
 
     -- Bad
@@ -142,33 +145,34 @@ local englishStrings = {
     --[[
         Ember
     ]]
-    -- 
+    --
     -- Good
-    CC_GOOD_EMBER_TEXT_1 = "Complete a non-perfect Thieves Guild Heist quest",
-    CC_GOOD_EMBER_TEXT_2 = "Complete a daily High Isle delve quest",
-    CC_GOOD_EMBER_TEXT_3 = "Sell a stolen purple-quality item to a Fence",
-    CC_GOOD_EMBER_TEXT_4 = "Choose the flee option when accosted by a guard", -- TODO
-    CC_GOOD_EMBER_TEXT_5 = "Choose the Clemency option when accosted by a guard (requires Thieves Guild skill line passive)",
-    CC_GOOD_EMBER_TEXT_6 = "Win a Tales of Tribute match",
-    CC_GOOD_EMBER_TEXT_7 = "Pickpocket a guard",
-    CC_GOOD_EMBER_TEXT_8 = "Loot a safebox or Thieves Trove", --10:35 -10:47 - 11:35 > 10
-    CC_GOOD_EMBER_TEXT_9 = "Complete a quest from the Tip Board in the Abah's Landing Thieves Den",
-    CC_GOOD_EMBER_TEXT_10 = "Use a counterfeit pardon edict", -- 2:44 4:53 ( <2 hours )   4:53 - 5:41 (>1 hour) (Probs 2 hours)
+    CC_GOOD_EMBER_TEXT_1  = "Complete a non-perfect Thieves Guild Heist quest",
+    CC_GOOD_EMBER_TEXT_2  = "Complete a daily High Isle delve quest",
+    CC_GOOD_EMBER_TEXT_3  = "Sell a stolen purple-quality item to a Fence",
+    CC_GOOD_EMBER_TEXT_4  = "Choose the flee option when accosted by a guard", -- TODO
+    CC_GOOD_EMBER_TEXT_5  =
+    "Choose the Clemency option when accosted by a guard (requires Thieves Guild skill line passive)",
+    CC_GOOD_EMBER_TEXT_6  = "Win a Tales of Tribute match",
+    CC_GOOD_EMBER_TEXT_7  = "Pickpocket a guard",
+    CC_GOOD_EMBER_TEXT_8  = "Loot a safebox or Thieves Trove", --10:35 -10:47 - 11:35 > 10
+    CC_GOOD_EMBER_TEXT_9  = "Complete a quest from the Tip Board in the Abah's Landing Thieves Den",
+    CC_GOOD_EMBER_TEXT_10 = "Use a counterfeit pardon edict",  -- 2:44 4:53 ( <2 hours )   4:53 - 5:41 (>1 hour) (Probs 2 hours)
     CC_GOOD_EMBER_TEXT_11 = "Harvest a runestone",
     CC_GOOD_EMBER_TEXT_12 = "Kill wolves",
     CC_GOOD_EMBER_TEXT_13 = "Kill werewolves",
     CC_GOOD_EMBER_TEXT_14 = "Successfully escape after choosing the flee option when accosted by a guard", -- TODO
-    CC_GOOD_EMBER_TEXT_15 = "Sell a purple-quality item to any NPC vendor", -- TODO
+    CC_GOOD_EMBER_TEXT_15 = "Sell a purple-quality item to any NPC vendor",                                -- TODO
     CC_GOOD_EMBER_TEXT_16 = "Enter an Outlaws Refuge or the Abah's Landing Thieves Den",
-    CC_GOOD_EMBER_TEXT_17 = "Tresspass in a restricted area", -- TODO
+    CC_GOOD_EMBER_TEXT_17 = "Tresspass in a restricted area",                                              -- TODO
     CC_GOOD_EMBER_TEXT_18 = "Summon the Big-Eared Ginger Kitten non-combat pet",
 
     -- Bad
-    CC_BAD_EMBER_TEXT_1  = "Get caught stealing, pickpocketing, or murdering/attacking an innocent NPC",
-    CC_BAD_EMBER_TEXT_2  = "Willingly pay a bounty when accosted by a guard",
-    CC_BAD_EMBER_TEXT_3  = "Get caught trespassing",
-    CC_BAD_EMBER_TEXT_4  = "Get killed by a guard",
-    CC_BAD_EMBER_TEXT_5  = "Start fishing",
+    CC_BAD_EMBER_TEXT_1   = "Get caught stealing, pickpocketing, or murdering/attacking an innocent NPC",
+    CC_BAD_EMBER_TEXT_2   = "Willingly pay a bounty when accosted by a guard",
+    CC_BAD_EMBER_TEXT_3   = "Get caught trespassing",
+    CC_BAD_EMBER_TEXT_4   = "Get killed by a guard",
+    CC_BAD_EMBER_TEXT_5   = "Start fishing",
 
     --[[
         Sharp-As-Night
@@ -183,11 +187,12 @@ local englishStrings = {
     CC_GOOD_SHARP_TEXT_6 = "Visit Vvardenfell",
     CC_GOOD_SHARP_TEXT_7 = "Visit Blackwood",
     CC_GOOD_SHARP_TEXT_8 = "Visit Hew's Bane",
+    CC_GOOD_SHARP_TEXT_9 = "Complete a daily quest for Ordinator Neyln in Necrom",
 
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
     CC_BAD_SHARP_TEXT_2 = "Willingly pay a bounty when accosted by a guard",
-    CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger", -- > 20
+    CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger",               -- > 20
     CC_BAD_SHARP_TEXT_4 = "Destorying an item from inventory", -- > 20
 
     --[[
@@ -195,48 +200,59 @@ local englishStrings = {
     ]]
 
     -- Good
-    CC_GOOD_AZANDAR_TEXT_1  = "Complete a daily enchanting master writ quest",
-    CC_GOOD_AZANDAR_TEXT_16 = "Complete a daily quest for Ordinator Tilena in Necrom",
-    CC_GOOD_AZANDAR_TEXT_2  = "Visit any mundus stone",
-    CC_GOOD_AZANDAR_TEXT_3  = "Scry for an antiquity",
-    CC_GOOD_AZANDAR_TEXT_17 = "Blade of Woe an innocent",
-    CC_GOOD_AZANDAR_TEXT_4  = "Finding a lead",
-    CC_GOOD_AZANDAR_TEXT_5  = "Finding a new lorebook",
-    CC_GOOD_AZANDAR_TEXT_6  = "Activating an Ayleid well",
-    CC_GOOD_AZANDAR_TEXT_7  = "Read any book",
-    CC_GOOD_AZANDAR_TEXT_8  = "Craft any tea",
-    CC_GOOD_AZANDAR_TEXT_9  = "Kill mudcrabs",
-    CC_GOOD_AZANDAR_TEXT_10 = "Kill Dreughs",
-    CC_GOOD_AZANDAR_TEXT_11 = "Kill Chaurus",
-    CC_GOOD_AZANDAR_TEXT_12 = "Kill Ogres",
-    CC_GOOD_AZANDAR_TEXT_13 = "Kill Trolls",
-    CC_GOOD_AZANDAR_TEXT_14 = "Kill Harpies",
-    CC_GOOD_AZANDAR_TEXT_15 = "Kill Nix-oxen",
+    CC_GOOD_AZANDAR_TEXT_1                    = "Complete a daily enchanting master writ quest",
+    CC_GOOD_AZANDAR_TEXT_16                   = "Complete a daily quest for Ordinator Tilena in Necrom",
+    CC_GOOD_AZANDAR_TEXT_2                    = "Visit any mundus stone",
+    CC_GOOD_AZANDAR_TEXT_3                    = "Scry for an antiquity",
+    CC_GOOD_AZANDAR_TEXT_17                   = "Blade of Woe an innocent",
+    CC_GOOD_AZANDAR_TEXT_4                    = "Finding a lead",
+    CC_GOOD_AZANDAR_TEXT_5                    = "Finding a new lorebook",
+    CC_GOOD_AZANDAR_TEXT_6                    = "Activating an Ayleid well",
+    CC_GOOD_AZANDAR_TEXT_7                    = "Read any book",
+    CC_GOOD_AZANDAR_TEXT_8                    = "Craft any tea",
+    CC_GOOD_AZANDAR_TEXT_9                    = "Kill mudcrabs",
+    CC_GOOD_AZANDAR_TEXT_10                   = "Kill Dreughs",
+    CC_GOOD_AZANDAR_TEXT_11                   = "Kill Chaurus",
+    CC_GOOD_AZANDAR_TEXT_12                   = "Kill Ogres",
+    CC_GOOD_AZANDAR_TEXT_13                   = "Kill Trolls",
+    CC_GOOD_AZANDAR_TEXT_14                   = "Kill Harpies",
+    CC_GOOD_AZANDAR_TEXT_15                   = "Kill Nix-oxen",
 
     -- Bad
-    CC_BAD_AZANDAR_TEXT_1 = "Visting Artaeum or Eyevea",
-    CC_BAD_AZANDAR_TEXT_2 = "Crafting any coffee", -- > 4
-    CC_BAD_AZANDAR_TEXT_3 = "Harvesting any mushroom",
+    CC_BAD_AZANDAR_TEXT_1                     = "Visting Artaeum or Eyevea",
+    CC_BAD_AZANDAR_TEXT_2                     = "Crafting any coffee", -- > 4
+    CC_BAD_AZANDAR_TEXT_3                     = "Harvesting any mushroom",
 
     ------------------------
     -- Settings Menu Text --
     ------------------------
 
-    CC_SETTINGS_TITLE                  = "About",
-    CC_SETTINGS_MENU_DESCRIPTION       = "This addon adds rapport information to the companion overview screen.  It also adds notification timers which when set will notify you after the allotted time.\n\nThanks to @NextTuesday for help with the English translation.\n\nThanks to @Baryzard for the French translation.  PM me if you would like to see this addon support your own language.",
-    CC_SETTINGS_NOTIFICATION_SECTION   = "Notification Options",
-    CC_SETTINGS_CHAT_REMINDER_NAME     = "Send reminder to chat",
-    CC_SETTINGS_CHAT_REMINDER_TOOLTIP  = "Should the reminder be sent to your chat box?",
-    CC_SETTINGS_NOTIFICATION_NAME      = "Send reminder to screen",
-    CC_SETTINGS_NOTIFICATION_TOOLTIP   = "Should the reminder popup on your screen?",
-    CC_SETTINGS_OTHER_SECTION          = "Other Options",
-    CC_SETTINGS_OTHER_TIMER_S_NAME     = "Notify on timer start",
-    CC_SETTINGS_OTHER_TIMER_S_TOOLTIP  = "When you start a timer, should a message be sent to your chat?",
-    CC_SETTINGS_OTHER_TIMER_R_NAME     = "Notify on timer reset",
-    CC_SETTINGS_OTHER_TIMER_R_TOOLTIP  = "When you reset a timer, should a message be sent to your chat?",
-    CC_SETTINS_OTHER_COUNTDOWN_NAME    = "Show countdowns",
-    CC_SETTINS_OTHER_COUNTDOWN_TOOLTIP = "Shows the time remaining before a notification.",
-    
+    CC_SETTINGS_TITLE                         = "About",
+    CC_SETTINGS_MENU_DESCRIPTION              =
+    "This addon adds rapport information to the companion overview screen.  It also adds notification timers which when set will notify you after the allotted time.\n\nThanks to @NextTuesday for help with the English translation.\nThanks to @Baryzard for the French translation.\n\nPM me if you would like to see this addon support your own language.",
+    CC_SETTINGS_NOTIFICATION_SECTION          = "Notification Options",
+    CC_SETTINGS_CHAT_REMINDER_NAME            = "Send reminder to chat",
+    CC_SETTINGS_CHAT_REMINDER_TOOLTIP         = "Should the reminder be sent to your chat box?",
+    CC_SETTINGS_NOTIFICATION_NAME             = "Send reminder to screen",
+    CC_SETTINGS_NOTIFICATION_TOOLTIP          = "Should the reminder popup on your screen?",
+    CC_SETTINGS_OTHER_SECTION                 = "Other Options",
+    CC_SETTINGS_OTHER_TIMER_S_NAME            = "Notify on timer start",
+    CC_SETTINGS_OTHER_TIMER_S_TOOLTIP         = "When you start a timer, should a message be sent to your chat?",
+    CC_SETTINGS_OTHER_TIMER_R_NAME            = "Notify on timer reset",
+    CC_SETTINGS_OTHER_TIMER_R_TOOLTIP         = "When you reset a timer, should a message be sent to your chat?",
+    CC_SETTINGS_OTHER_COUNTDOWN_NAME          = "Show countdowns",
+    CC_SETTINGS_OTHER_COUNTDOWN_TOOLTIP       = "Shows the time remaining before a notification.",
+
+    CC_SETTINGS_OTHER_RAPPORT_IN_CHAT_NAME    = "Show rapport in chat",
+    CC_SETTINGS_OTHER_RAPPORT_IN_CHAT_TOOLTIP =
+    "Should a message be sent to the chat everytime your characters rapport changes?",
+
+    ------------------------
+    --   Chat Messages    --
+    ------------------------
+    CC_CHAT_GAINED_RAPPORT                    = "<<1>> has gained <<2>> rapport.",
+    CC_CHAT_LOST_RAPPORT                      = "<<1>> has lost <<2>> rapport."
+
 }
 
 -- Load all the english words in as default

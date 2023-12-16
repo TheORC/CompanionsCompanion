@@ -4,9 +4,7 @@
 ]]
 CC_Libs = {}
 
---[[
 
-]]
 function CC_Libs.is_array(t)
     if t == 0 or type(t) == "number" then return false end
 
@@ -21,10 +19,11 @@ end
 --[[
     Method used for outputting messages to the chat
 ]]
-function CC_Libs.m(value)
+function CC_Libs.m(value, chatColor)
     local output = {}
 
     table.insert(output, CC_SETTINGS.CHAT_PREFIX)
+    table.insert(output, chatColor)
     table.insert(output, value)
     table.insert(output, CC_SETTINGS.CHAT_SUFFIX)
 
@@ -50,21 +49,45 @@ end
 --[[
     Converts seconds in to text friedly format
 ]]
-function CC_Libs.SecondsToReadibleFormat(seconds)
-    local timeMinutes = seconds     / 60
+function CC_Libs.SecondsToReadibleFormat(totalSeconds)
+    local days    = math.floor(totalSeconds / 86400)
+    local hours   = math.floor((totalSeconds % 86400) / 3600)
+    local minutes = math.floor((totalSeconds % 3600) / 60)
+    local seconds = math.floor(totalSeconds % 60)
+
+    local output  = {}
+
+    if (days > 0) then
+        table.insert(output, days .. " " .. GetString(CC_TIME_DAYS))
+    end
+
+    if hours > 0 then
+        table.insert(output, hours .. " " .. GetString(CC_TIME_HOURS))
+    end
+
+    if minutes > 0 then
+        table.insert(output, minutes .. " " .. GetString(CC_TIME_MINUTES))
+    end
+
+    if seconds > 0 then
+        table.insert(output, seconds .. " " .. GetString(CC_TIME_SECONDS))
+    end
+
+    local timeMinutes = seconds / 60
     local timeHours   = timeMinutes / 60
     local isMinutes   = timeMinutes < 50
 
-    local abbString = ZO_AbbreviateAndLocalizeNumber(isMinutes and timeMinutes or timeHours, 0, false)
-    local timeUnit  = GetString(isMinutes and CC_TIME_MINUTES or CC_TIME_HOURS)
+    local abbString   = ZO_AbbreviateAndLocalizeNumber(isMinutes and timeMinutes or timeHours, 0, false)
+    local timeUnit    = GetString(isMinutes and CC_TIME_MINUTES or CC_TIME_HOURS)
 
-    return zo_strformat(CC_TIME_STRING, abbString, timeUnit)
+    return zo_strformat(CC_TIME_STRING, unpack(output))
 end
 
 ----------------------------------
 -- Timer text second data
 ---------------------------------
 local CC_TIME_TABLE = {
+    [CC_1_MINUTES]                         = 5,
     [CC_2_MINUTES]                         = 120,
     [CC_3_MINUTES]                         = 180,
     [CC_5_MINUTES]                         = 300,
@@ -88,7 +111,7 @@ local CC_TIME_TABLE = {
 
 --[[
     TODO: Remove this from here.
-    Returns the number of seconds 
+    Returns the number of seconds
 ]]
 function CC_Libs.CC_ConvertStringToSeconds(timerId)
     return CC_TIME_TABLE[timerId]

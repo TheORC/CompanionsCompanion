@@ -1,12 +1,12 @@
 <GuiXml>
     <Controls>
         <Control name="CC_RapportPanel" inherits="ZO_ScrollContainer" tier="HIGH" virtual="true">
-            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)"   offsetX="0" offsetY="400"/>
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)" offsetX="0" offsetY="400"/>
             <Anchor point="TOPRIGHT" relativePoint="TOPRIGHT" relativeTo="$(parent)" offsetX="0" offsetY="400"/>
             <Dimensions y="250" />
             <OnInitialized>
                 ZO_Scroll_Initialize(self)
-             </OnInitialized>
+            </OnInitialized>
             <Controls>
                 <Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop">
                     <AnchorFill/>
@@ -15,7 +15,7 @@
         </Control>
 
         <Control name="CC_InfoPanel" virtual="true">
-            <Anchor point="TOPLEFT"  relativeTo="$(parent)" relativePoint="TOPLEFT"  offsetX="0" offsetY="0"/>
+            <Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="0" offsetY="0"/>
             <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT" offsetX="0" offsetY="0"/>
             <OnInitialized>
                 self:SetResizeToFitDescendents(true)
@@ -23,7 +23,7 @@
             <Controls>
 
                 <Label name="$(parent)Title" font="ZoFontHeader" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_NORMAL" text="SI_OUTFIT_SELECTOR_TITLE" verticalAlignment="CENTER" horizontalAlignmen="LEFT">
-                    <Anchor point="TOPLEFT"  relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="5" offsetY="10"/>
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="5" offsetY="10"/>
                     <Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT" offsetY="10"/>
                 </Label>
 

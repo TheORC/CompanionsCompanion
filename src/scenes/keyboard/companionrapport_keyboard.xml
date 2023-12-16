@@ -9,7 +9,7 @@
             </Controls>
         </Label>
 
-        <Control name="CC_RapportPanelTemplate" inherits="ZO_ScrollContainer" tier="HIGH" resizeToFitDescendents="true" virtual="true" >
+        <Control name="CC_RapportPanelTemplate" inherits="ZO_ScrollContainer" tier="HIGH" resizeToFitDescendents="true" virtual="true">
             <Dimensions x="550" />
 
             <Controls>
@@ -20,8 +20,8 @@
                     <Anchor point="TOPLEFT" offsetX="38" offsetY="10" />
                     <Dimensions x="52" y="52"/>
                 </Texture>
-                
-                <Label name="$(parent)Title" inherits="ZO_AchievementsDefaultLabel_Keyboard" font="ZoFontWindowSubtitle" >
+
+                <Label name="$(parent)Title" inherits="ZO_AchievementsDefaultLabel_Keyboard" font="ZoFontWindowSubtitle">
                     <Dimensions x="350" />
                     <Anchor point="TOPLEFT" relativeTo="$(parent)Icon" relativePoint="TOPRIGHT" offsetX="6" />
                 </Label>
@@ -30,7 +30,7 @@
                     <Anchor point="TOPLEFT" relativeTo="$(parent)Title" relativePoint="BOTTOMLEFT" />
                     <Anchor point="TOPRIGHT" relativeTo="$(parent)Title" relativePoint="BOTTOMRIGHT" />
                 </Label>
-                
+
                 <Control name="$(parent)BulletList">
                     <Anchor point="TOPLEFT" relativeTo="$(parent)Countdown" relativePoint="BOTTOMLEFT" offsetX="25" offsetY="20"/>
                     <Anchor point="TOPRIGHT" relativeTo="$(parent)Countdown" relativePoint="BOTTOMRIGHT" offsetX="-25" offsetY="20"/>
@@ -62,7 +62,7 @@
                 <Control name="$(parent)RightContainer">
                     <Dimensions x="615" y="690" />
                     <Anchor point="RIGHT" relativeTo="GuiRoot" offsetY="32" />
-                    
+
                     <!-- Sellected Rapport Info -->
                     <Controls>
                         <!-- Rapport Container -->
@@ -70,11 +70,11 @@
                             <Anchor point="TOPLEFT" offsetY="32" />
                             <Anchor point="RIGHT" offsetX="-60" constrains="X" />
 
-                            <Controls>                                
+                            <Controls>
                                 <Label name="$(parent)Header" font="ZoFontHeader4" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED" modifyTextType="UPPERCASE" text="SI_COMPANION_OVERVIEW_RAPPORT">
                                     <Anchor point="TOPLEFT" />
                                 </Label>
-                                
+
                                 <Control name="$(parent)Progress">
                                     <Dimensions y="56" />
                                     <Anchor point="TOPLEFT" relativeTo="$(parent)Header" relativePoint="BOTTOMLEFT" offsetY="10" />
@@ -84,12 +84,12 @@
                                             <Dimensions x="32" y="32" />
                                             <Anchor point="TOPLEFT" />
                                         </Texture>
-                                        
+
                                         <Texture name="$(parent)IconRight" textureFile="EsoUI/Art/HUD/lootHistory_icon_rapportIncrease_generic.dds">
                                             <Dimensions x="32" y="32" />
                                             <Anchor point="TOPRIGHT" />
                                         </Texture>
-                                        
+
                                         <Control name="$(parent)Bar" inherits="ZO_SlidingStatusBar">
                                             <Dimensions y="23" />
                                             <Anchor point="LEFT" relativeTo="$(parent)IconLeft" relativePoint="RIGHT" />
@@ -97,7 +97,7 @@
                                         </Control>
                                     </Controls>
                                 </Control>
-                                
+
                                 <Control name="$(parent)Status">
                                     <Dimensions y="24" />
                                     <Anchor point="TOPLEFT" relativeTo="$(parent)Progress" relativePoint="BOTTOMLEFT" offsetY="10" />
@@ -112,17 +112,17 @@
                                         </Label>
                                     </Controls>
                                 </Control>
-                                
+
                                 <Label name="$(parent)Description" font="ZoFontHeader" color="INTERFACE_COLOR_TYPE_TEXT_COLOR:INTERFACE_TEXT_COLOR_SELECTED">
                                     <Anchor point="TOPLEFT" relativeTo="$(parent)Status" relativePoint="BOTTOMLEFT" offsetY="10" />
                                     <Anchor point="TOPRIGHT" relativeTo="$(parent)Status" relativePoint="BOTTOMRIGHT" offsetY="10" />
-                                </Label>      
+                                </Label>
 
                                 <Control name="$(parent)Divider" inherits="ZO_WideHorizontalDivider">
                                     <Anchor point="TOPLEFT" relativeTo="$(parent)Description" relativePoint="BOTTOMLEFT" offsetY="15"/>
-                                </Control>   
+                                </Control>
                             </Controls>
-                        </Control> 
+                        </Control>
 
                         <!-- Rapport Container -->
                         <Control name="$(parent)RapportPanelList" inherits="ZO_ScrollContainer" tier="HIGH">
