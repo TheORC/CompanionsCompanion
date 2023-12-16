@@ -400,6 +400,7 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
             end
         })
 
+        -- Check if there is an interaction cooldown
         local rapportTime = CC_GetRapportTime(interactionId)
         if rapportTime == nil or rapportTime == 0 then
             poolObject:HideTimerButton()
@@ -407,13 +408,10 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
             poolObject:ShowTimerButton()
         end
 
+        -- Check to see if there is an active cooldown
         local timerId = CC_GetTimerId(interactionId)
         if timerId ~= nil then
-            local timer = CC_TIMER_MANAGER:GetTimer(timerId)
-            local timerString = CC_Libs.SecondsToReadibleFormat(timer:GetRemainingTime())
-
             poolObject:SetTimerButtonText(GetString(CC_CANCEL_BTN))
-            poolObject:SetTimer(timerString)
         end
 
         -- Store the rapport element based on it's interactionId
@@ -444,6 +442,11 @@ end
 ---This method is responsible for updating the count down timer text.
 ---@param timer CC_Timer
 function CC_CompanionRapport_Keyboard:TimerUpdate(timer)
+    -- We don't do any timer display if the user has disabled this setting
+    if not CC_STORAGE_MANAGER:GetSetting(CC_SETTING_OPTIONS.SHOW_COUNTDOWN) then
+        return
+    end
+
     local timerData     = timer:GetData()
     local rapportObject = self.rapportObjects[timerData.interactionId]
 
