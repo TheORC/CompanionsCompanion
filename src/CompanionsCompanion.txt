@@ -32,6 +32,6 @@ libs/Library.lua
 utils/EventManager.lua
 utils/NotificationManager.lua
 utils/StorageManager.lua
+utils/AddonSettingMenu.lua
 
 CC.lua
-AddonSettingMenu.lua

@@ -4,13 +4,6 @@
 
 local LAM2 = LibAddonMenu2
 
-local panelData = {
-  type    = "panel",
-  name    = CC_SETTINGS.DISPLAY_NAME,
-  author  = CC_SETTINGS.AUTHOR,
-  version = CC_SETTINGS.VERSION,
-}
-
 local optionsData = {
   {
     type = "header",
@@ -75,6 +68,13 @@ local optionsData = {
 
 ---Creates the menu to display the addons settings.
 function CC_CreateAddonMenu()
+  local panelData = {
+    type    = "panel",
+    name    = CC_SETTINGS.DISPLAY_NAME,
+    author  = CC_SETTINGS.AUTHOR,
+    version = CC_SETTINGS.VERSION,
+  }
+
   LAM2:RegisterAddonPanel("CompanionsCompacionsOptions", panelData)
   LAM2:RegisterOptionControls("CompanionsCompacionsOptions", optionsData)
 end
