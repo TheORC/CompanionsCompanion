@@ -188,6 +188,7 @@ local englishStrings = {
     CC_GOOD_SHARP_TEXT_7 = "Visit Blackwood",
     CC_GOOD_SHARP_TEXT_8 = "Visit Hew's Bane",
     CC_GOOD_SHARP_TEXT_9 = "Complete a daily quest for Ordinator Neyln in Necrom",
+    CC_GOOD_SHARP_TEXT_10 = "Kill ghosts",
 
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
