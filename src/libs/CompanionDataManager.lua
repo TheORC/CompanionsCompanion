@@ -606,6 +606,11 @@ local CC_COMPANION_DATA = {
                 rapport = 1,
             },
             {
+                text = CC_GOOD_SHARP_TEXT_10,
+                time = CC_5_MINUTES,
+                rapport = 1,
+            },
+            {
                 text = CC_GOOD_SHARP_TEXT_3,
                 time = CC_1_HOUR,
                 rapport = 1,
