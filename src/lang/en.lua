@@ -184,18 +184,22 @@ local englishStrings = {
     CC_GOOD_SHARP_TEXT_3 = "Harvest an alchemy material",
     CC_GOOD_SHARP_TEXT_4 = "Start fishing",
     CC_GOOD_SHARP_TEXT_5 = "Catch a non-common fish",
-    CC_GOOD_SHARP_TEXT_6 = "Visit Vvardenfell",
-    CC_GOOD_SHARP_TEXT_7 = "Visit Blackwood",
-    CC_GOOD_SHARP_TEXT_8 = "Visit Hew's Bane",
     CC_GOOD_SHARP_TEXT_9 = "Complete a daily quest for Ordinator Neyln in Necrom",
-    CC_GOOD_SHARP_TEXT_10 = "Kill ghosts",
-    -- Visit a hist tree (10 rapport)
+    CC_GOOD_SHARP_TEXT_10 = "Kill a ghost",
+    CC_GOOD_SHART_TEXT_11 = "Visit any hist tree",
+    CC_GOOD_SHART_TEXT_12 = "Talking to M'aiq the Liar",
+    CC_GOOD_SHART_TEXT_13 = "Eat a meal",
+    CC_GOOD_SHART_TEXT_14 = "Craft a poison",
+    CC_GOOD_SHARP_TEXT_15 = "Kill a Fabricant or Dwarven construct",
+    CC_GOOD_SHARP_TEXT_16 = "Find a treasure map chest",
+    CC_GOOD_SHARP_TEXT_17 = "Obtain a monster trophy",
 
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
     CC_BAD_SHARP_TEXT_2 = "Willingly pay a bounty when accosted by a guard",
     CC_BAD_SHARP_TEXT_3 = "Pickpocket a begger",               -- > 20
     CC_BAD_SHARP_TEXT_4 = "Destorying an item from inventory", -- > 20
+    CC_BAD_SHARP_TEXT_5 = "Let your gear break",
 
     --[[
         Azandar Al-Cybiades
@@ -206,24 +210,21 @@ local englishStrings = {
     CC_GOOD_AZANDAR_TEXT_16                   = "Complete a daily quest for Ordinator Tilena in Necrom",
     CC_GOOD_AZANDAR_TEXT_2                    = "Visit any mundus stone",
     CC_GOOD_AZANDAR_TEXT_3                    = "Scry for an antiquity",
-    CC_GOOD_AZANDAR_TEXT_17                   = "Blade of Woe an innocent",
-    CC_GOOD_AZANDAR_TEXT_4                    = "Finding a lead",
-    CC_GOOD_AZANDAR_TEXT_5                    = "Finding a new lorebook",
+    CC_GOOD_AZANDAR_TEXT_4                    = "Find a lead",
+    CC_GOOD_AZANDAR_TEXT_5                    = "Find a new lorebook",
     CC_GOOD_AZANDAR_TEXT_6                    = "Activating an Ayleid well",
-    CC_GOOD_AZANDAR_TEXT_7                    = "Read any book",
+    CC_GOOD_AZANDAR_TEXT_7                    = "Read any mages guild book",
     CC_GOOD_AZANDAR_TEXT_8                    = "Craft any tea",
-    CC_GOOD_AZANDAR_TEXT_9                    = "Kill mudcrabs",
-    CC_GOOD_AZANDAR_TEXT_10                   = "Kill Dreughs",
-    CC_GOOD_AZANDAR_TEXT_11                   = "Kill Chaurus",
-    CC_GOOD_AZANDAR_TEXT_12                   = "Kill Ogres",
-    CC_GOOD_AZANDAR_TEXT_13                   = "Kill Trolls",
-    CC_GOOD_AZANDAR_TEXT_14                   = "Kill Harpies",
-    CC_GOOD_AZANDAR_TEXT_15                   = "Kill Nix-oxen",
+    CC_GOOD_AZANDAR_TEXT_9                    = "Kill mudcrabs, dreughs, chaurus, ogres, trolls, harpies, nix-oxen, or dunerippers",
+    CC_GOOD_AZANDAR_TEXT_18                   = "Visit the Brass Fortress, The Hollow City, or Fargrave City District",
+    CC_GOOD_AZANDAR_TEXT_19                   = "Complete an Oblivion Portal",
+    CC_GOOD_AZANDAR_TEXT_20                   = "Conseume any tea type beverages",
 
     -- Bad
     CC_BAD_AZANDAR_TEXT_1                     = "Visting Artaeum or Eyevea",
     CC_BAD_AZANDAR_TEXT_2                     = "Crafting any coffee", -- > 4
     CC_BAD_AZANDAR_TEXT_3                     = "Harvesting any mushroom",
+    CC_BAD_AZANDAR_TEXT_4                     = "Play Tales of Tribute",
 
     ------------------------
     -- Settings Menu Text --
