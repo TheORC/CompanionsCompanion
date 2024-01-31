@@ -4,7 +4,6 @@
 ]]
 CC_Libs = {}
 
-
 function CC_Libs.is_array(t)
     if t == 0 or type(t) == "number" then return false end
 

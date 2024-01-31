@@ -189,6 +189,7 @@ local englishStrings = {
     CC_GOOD_SHARP_TEXT_8 = "Visit Hew's Bane",
     CC_GOOD_SHARP_TEXT_9 = "Complete a daily quest for Ordinator Neyln in Necrom",
     CC_GOOD_SHARP_TEXT_10 = "Kill ghosts",
+    -- Visit a hist tree (10 rapport)
 
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Visit an outfit station",
@@ -230,7 +231,7 @@ local englishStrings = {
 
     CC_SETTINGS_TITLE                         = "About",
     CC_SETTINGS_MENU_DESCRIPTION              =
-    "This addon adds rapport information to the companion overview screen.  It also adds notification timers which when set will notify you after the allotted time.\n\nThanks to @NextTuesday for help with the English translation.\nThanks to @Baryzard for the French translation.\n\nPM me if you would like to see this addon support your own language.",
+    "This addon adds rapport information to the companion overview screen.  It also adds notification timers which when set will notify you after the allotted time.\n\nThanks to @NextTuesday for help with the English translation.\nThanks to @Baryzard for the French translation.\n\nThanks to @Neverlands for the German translation.\n\nPM me if you would like to see this addon support your own language.",
     CC_SETTINGS_NOTIFICATION_SECTION          = "Notification Options",
     CC_SETTINGS_CHAT_REMINDER_NAME            = "Send reminder to chat",
     CC_SETTINGS_CHAT_REMINDER_TOOLTIP         = "Should the reminder be sent to your chat box?",

@@ -3,7 +3,7 @@
 ## Author: AnotherORC
 ## APIVersion: 101039
 ## AddOnVersion: 100
-## Version: 2.3.0
+## Version: 2.4.0-RC
 ## SavedVariables: CompanionsCompanionVars
 ## DependsOn: LibAddonMenu-2.0
 

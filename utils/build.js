@@ -20,7 +20,7 @@ async function UpdatePlugin() {
  * Helper method for creating a zip for the plugin.
  */
 async function BuildPlugin() {
-  await zip('./src', './builds/CompanionsCompanion.zip');
+  await zip('./src', './builds/CompanionsCompanion.zip', { destPath: 'CompanionsCompanion/' });
 }
 
 switch (process.env.ENVIRONMENT) {
