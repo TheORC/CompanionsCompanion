@@ -182,7 +182,7 @@ local frenchStrings = {
 
     CC_SETTINGS_TITLE                   = "À propos",
     CC_SETTINGS_MENU_DESCRIPTION        =
-    "Cet addon ajoute des informations sur la relation dans le menu de compagnon. Il ajoute également des rappels, qui lorsqu'ils sont activés, vous enverront une notification une fois le délai de récupération écoulé.\n\nMerci à @NextTuesday pour son aide sur la traduction anglaise. Merci à @Baryzard pour la traduction française. Envoyez-moi un MP (en anglais) si vous aimeriez voir cet addon traduit dans votre langue.",
+    "Cet addon ajoute des informations sur la relation dans le menu de compagnon. Il ajoute également des rappels, qui lorsqu'ils sont activés, vous enverront une notification une fois le délai de récupération écoulé.\n\nMerci à @NextTuesday pour son aide sur la traduction anglaise.\nMerci à @Baryzard pour la traduction française.\nMerci à @Neverlands pour la traduction allemande.\n\nEnvoyez-moi un MP (en anglais) si vous aimeriez voir cet addon traduit dans votre langue.",
     CC_SETTINGS_NOTIFICATION_SECTION    = "Options de notification",
     CC_SETTINGS_CHAT_REMINDER_NAME      = "Faire apparaître le rappel dans le chat",
     CC_SETTINGS_CHAT_REMINDER_TOOLTIP   = "Un message de rappel doit-il être envoyé dans votre chat ?",

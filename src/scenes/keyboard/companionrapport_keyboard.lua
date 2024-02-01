@@ -292,6 +292,7 @@ function CC_CompanionRapport_Keyboard:InitializeRapportPool()
     local function CreateNewRapport(objectPool)
         local rapport = ZO_ObjectPool_CreateControl("CC_RapportPanelTemplate", objectPool, self.contentListScrollChild)
         rapport.owner = self
+        ---@diagnostic disable-next-line: undefined-field
         return CC_RapportObject:New(rapport)
     end
 
