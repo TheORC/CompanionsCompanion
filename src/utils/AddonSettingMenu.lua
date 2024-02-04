@@ -72,7 +72,7 @@ function CC_CreateAddonMenu()
     type    = "panel",
     name    = CC_SETTINGS.DISPLAY_NAME,
     author  = CC_SETTINGS.AUTHOR,
-    version = CC_SETTINGS.VERSION,
+    version = "v" .. CC_SETTINGS.VERSION,
   }
 
   LAM2:RegisterAddonPanel("CompanionsCompacionsOptions", panelData)

@@ -1,12 +1,13 @@
-{
+﻿{
   "name": "companionscompanion",
-  "version": "2.4.0-RC",
+  "version": "2.4.0",
   "description": "Provides additional information about your companions rapport in an easy to access location.",
   "type": "module",
   "scripts": {
     "release": "cross-env ENVIRONMENT=deploy node ./utils/build.js",
     "build": "cross-env ENVIRONMENT=development node ./utils/build.js",
-    "watch-dev": "watch \"npm run build\" ./src"
+    "watch-dev": "watch \"npm run build\" ./src",
+    "update-version": "powershell ./utils/updateversion.ps1"
   },
   "author": "",
   "license": "ISC",
