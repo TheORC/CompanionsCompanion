@@ -559,19 +559,29 @@ local CC_COMPANION_DATA = {
                 rapport = 125,
             },
             {
-                text = CC_GOOD_SHARP_TEXT_6,
+                text = CC_GOOD_SHART_TEXT_11,
+                time = CC_10_MINUTES,
+                rapport = 10,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_17,
+                time = CC_10_MINUTES,
+                rapport = 10,
+            },
+            {
+                text = CC_GOOD_SHART_TEXT_12,
                 time = CC_UNKNOWN_TIME,
+                rapport = 10,
+            },
+            {
+                text = CC_GOOD_SHART_TEXT_13,
+                time = CC_1_HOUR,
                 rapport = 5,
             },
             {
-                text = CC_GOOD_SHARP_TEXT_7,
-                time = CC_UNKNOWN_TIME,
-                rapport = 4,
-            },
-            {
-                text = CC_GOOD_SHARP_TEXT_8,
-                time = CC_UNKNOWN_TIME,
-                rapport = 4,
+                text = CC_GOOD_SHART_TEXT_14,
+                time = CC_1_HOUR,
+                rapport = 5,
             },
             {
                 text = CC_GOOD_SHARP_TEXT_1,
@@ -596,6 +606,17 @@ local CC_COMPANION_DATA = {
                 },
             },
             {
+                text = CC_GOOD_SHARP_TEXT_16,
+                time = {
+                    CC_FIRST_TIME,
+                    CC_OTHER_TIMES,
+                },
+                rapport = {
+                    5,
+                    1
+                },
+            },
+            {
                 text = CC_GOOD_SHARP_TEXT_4,
                 time = CC_10_MINUTES,
                 rapport = 1,
@@ -607,6 +628,11 @@ local CC_COMPANION_DATA = {
             },
             {
                 text = CC_GOOD_SHARP_TEXT_10,
+                time = CC_5_MINUTES,
+                rapport = 1,
+            },
+            {
+                text = CC_GOOD_SHARP_TEXT_15,
                 time = CC_5_MINUTES,
                 rapport = 1,
             },
@@ -635,8 +661,13 @@ local CC_COMPANION_DATA = {
             {
                 text = CC_BAD_SHARP_TEXT_1,
                 time = CC_UNKNOWN_TIME,
-                rapport = 5,
+                rapport = 1,
             },
+            {
+                text = CC_BAD_SHARP_TEXT_5,
+                time = CC_UNKNOWN_TIME,
+                rapport = 1,
+            }
         }
     },
     [11114] = { -- Azandar Al-Cybiades
@@ -662,23 +693,17 @@ local CC_COMPANION_DATA = {
                 rapport = 10,
             },
             {
+                text = CC_GOOD_AZANDAR_TEXT_18,
+                time = CC_UNKNOWN_TIME,
+                rapport = 10,
+            },
+            {
                 text = CC_SHARED_LOOTING_PSIJIC_PORTAL,
-                time = {
-                    CC_FIRST_TIME,
-                    CC_OTHER_TIMES,
-                },
-                rapport = {
-                    10,
-                    5
-                },
+                time = CC_UNKNOWN_TIME,
+                rapport = 5
             },
             {
                 text = CC_GOOD_AZANDAR_TEXT_3,
-                time = CC_UNKNOWN_TIME,
-                rapport = 5,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_17,
                 time = CC_UNKNOWN_TIME,
                 rapport = 5,
             },
@@ -698,12 +723,28 @@ local CC_COMPANION_DATA = {
                 rapport = 5,
             },
             {
-                text = CC_GOOD_AZANDAR_TEXT_7,
+                text = CC_GOOD_AZANDAR_TEXT_19,
+                time = CC_UNKNOWN_TIME,
+                rapport = 5,
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_20,
+                time = {
+                    CC_FIRST_TIME,
+                    CC_OTHER_TIMES,
+                },
+                rapport = {
+                    5,
+                    1
+                },
+            },
+            {
+                text = CC_GOOD_AZANDAR_TEXT_8,
                 time = CC_UNKNOWN_TIME,
                 rapport = 1,
             },
             {
-                text = CC_GOOD_AZANDAR_TEXT_8,
+                text = CC_GOOD_AZANDAR_TEXT_7,
                 time = CC_UNKNOWN_TIME,
                 rapport = 1,
             },
@@ -712,36 +753,6 @@ local CC_COMPANION_DATA = {
                 time = CC_UNKNOWN_TIME,
                 rapport = 1,
             },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_10,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_11,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_12,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_13,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_14,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            },
-            {
-                text = CC_GOOD_AZANDAR_TEXT_15,
-                time = CC_UNKNOWN_TIME,
-                rapport = 1,
-            }
         },
         bad = {
             {
@@ -757,6 +768,11 @@ local CC_COMPANION_DATA = {
             {
                 text = CC_BAD_AZANDAR_TEXT_3,
                 time = CC_5_MINUTES,
+                rapport = 1,
+            },
+            {
+                text = CC_BAD_AZANDAR_TEXT_4,
+                time = CC_UNKNOWN_TIME,
                 rapport = 1,
             },
         }
