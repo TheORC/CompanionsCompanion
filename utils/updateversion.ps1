@@ -1,5 +1,5 @@
 # Prompt the user for the new version number
-$newVersionNumber = Read-Host -Prompt 'Input the new version number'
+$newVersionNumber = Get-Content -Path ".\version.txt"
 
 # Define the path where the Lua files are located
 $PACKAGE = "package.json"
