@@ -1,5 +1,0 @@
-
-
-function CC_CompanionRapportGood_Keyboard_OnInitialize(control)
-
-end

@@ -10,19 +10,10 @@
 lang/en.lua
 lang/$(language).lua
 
-ui/CC.xml
 ui/ResetDialog.xml
-
-scenes/keyboard/rapport/companionrapport_good_keyboard.lua
-scenes/keyboard/rapport/companionrapport_good_keyboard.xml
 
 scenes/keyboard/companionrapport_keyboard.lua
 scenes/keyboard/companionrapport_keyboard.xml
-
-scenes/gamepad/companionrapport_gamepad.lua
-scenes/gamepad/companionrapport_gamepad.xml
-scenes/gamepad/companionrapport_good_rapport.lua
-scenes/gamepad/companionrapport_good_rapport.xml
 
 libs/Timer.lua
 libs/TimerManager.lua
