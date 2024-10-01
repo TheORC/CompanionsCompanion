@@ -12,8 +12,17 @@ async function UpdatePlugin() {
     dest: process.env.PLUGIN_PATH,
   });
 
+  const { resDev, errDev } = await reflect({
+    src: 'src/',
+    dest: process.env.PLUGIN_DEV_PATH,
+  });
+
   if (err) {
     console.log(res);
+  }
+
+  if (errDev) {
+    console.log(errDev);
   }
 }
 

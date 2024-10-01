@@ -1,3 +1,5 @@
+-- /script SetCVar("language.2", "de")
+
 local englishStrings = {
 
     --[[
