@@ -199,5 +199,5 @@ local frenchStrings = {
 }
 
 for id, val in pairs(frenchStrings) do
-    SafeAddString(_G[id], val, 1)
+    SafeAddString(_G[id], val, 3)
 end

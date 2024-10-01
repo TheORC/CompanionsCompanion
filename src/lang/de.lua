@@ -9,9 +9,9 @@ local germanStrings = {
         General
     ]]
     CC_TEXT_GOOD_RAPPORT       = "Beziehung verbessern", -- Title
-    CC_TEXT_BAD_RAPPORT        = "Beziehung senken",  -- Title
-    CC_REMINDER_BTN            = "Erinnern",       -- Remind btn text
-    CC_CANCEL_BTN              = "Beenden",       -- Cancel btn text
+    CC_TEXT_BAD_RAPPORT        = "Beziehung senken",     -- Title
+    CC_REMINDER_BTN            = "Erinnern",             -- Remind btn text
+    CC_CANCEL_BTN              = "Beenden",              -- Cancel btn text
     CC_ERROR_START_TIMER       = "Der Timer konnte nicht gestartet werden",
     CC_RESET_MODAL_TITLE       = "Timer beenden",
     CC_RESET_MODAL_DESCRIPTION = "Seid Ihr sicher, dass Ihr den Timer für dieses Ereignis beenden möchtet?",
@@ -20,7 +20,7 @@ local germanStrings = {
         Notifications
     ]]
     CC_NOTIFICATION_TIMER_FINISH_MAIN   = "<<1>> Beziehung", -- Screen top notification
-    CC_NOTIFICATION_TIMER_FINISH_SECOND = "<<1>>",         -- Screen bottom notification
+    CC_NOTIFICATION_TIMER_FINISH_SECOND = "<<1>>",           -- Screen bottom notification
     CC_CHAT_TIMER_FINISH                = "Ihr könnt jetzt \"<<1>>\" mit <<2>> ausführen.",
     CC_CHAT_TIMER_START                 = "Erinnerung für \"<<1>>\" auf <<2>> gestellt.",
     CC_CHAT_TIMER_CANCEL                = "Ihr habt die Erinnerung für \"<<1>>\" beendet.",
@@ -84,7 +84,8 @@ local germanStrings = {
     CC_GOOD_ISOBEL_TEXT_15 = "Sprecht mit Lyris Titanenkind", -- 6:00 -- 7:00
     CC_GOOD_ISOBEL_TEXT_16 = "Verwendet ein Reparaturmaterial",
     CC_GOOD_ISOBEL_TEXT_17 = "Nehmt eine Duell-Einladung von einem anderen Spieler an",
-    CC_GOOD_ISOBEL_TEXT_18 = "Beschwört den 'Druadach-Gebirgshund' oder den 'Bravil-Apportierhund' (friedliche Begleiter)",
+    CC_GOOD_ISOBEL_TEXT_18 =
+    "Beschwört den 'Druadach-Gebirgshund' oder den 'Bravil-Apportierhund' (friedliche Begleiter)",
 
     -- Bad
     CC_BAD_ISOBEL_TEXT_1   = "Tötet einen unschuldigen NSC",
@@ -123,7 +124,8 @@ local germanStrings = {
     -- Good
     CC_GOOD_MIRRI_TEXT_1 = "Schließt eine tägliche Aschländer-Quest für Numani-Rasi ab.",
     CC_GOOD_MIRRI_TEXT_2 = "Schließt eine tägliche Quest für die Kriegergilde ab",
-    CC_GOOD_MIRRI_TEXT_3 = "Betretet die Bibliothek von Vivec in der Stadt Vivec, die ein vollständiges Modell von Vvardenfell enthält",
+    CC_GOOD_MIRRI_TEXT_3 =
+    "Betretet die Bibliothek von Vivec in der Stadt Vivec, die ein vollständiges Modell von Vvardenfell enthält",
     CC_GOOD_MIRRI_TEXT_4 = "Betretet das Diebesnest in Abahs Landung, das Gegenstände von Karis Wunschliste enthält",
     CC_GOOD_MIRRI_TEXT_5 = "Betretet ein daedrisches Gewölbe oder ein Offenes Verlies",
     CC_GOOD_MIRRI_TEXT_6 = "Besucht die Stadt der Uhrwerke (außer die Messingfeste, es sei denn, durch das Haupttor)",
@@ -135,7 +137,7 @@ local germanStrings = {
     CC_GOOD_MIRRI_TEXT_14 = "Tötet einen Goblin",
     CC_GOOD_MIRRI_TEXT_15 = "Tötet eine Schlange (Kleintiere inkludiert)",
     CC_GOOD_MIRRI_TEXT_16 = "Stellt ein alkoholisches Getränk her",
-    CC_GOOD_MIRRI_TEXT_17 = "Lest ein Buch aus einem Bücherregal",             -- 5:34pm -6:36 -7:36 -9:44 >2hour
+    CC_GOOD_MIRRI_TEXT_17 = "Lest ein Buch aus einem Bücherregal",                     -- 5:34pm -6:36 -7:36 -9:44 >2hour
     CC_GOOD_MIRRI_TEXT_18 = "Beschwört das 'dämonische Huhn' (friedlicher Begleiter)", -- TODO
 
     -- Bad
@@ -151,23 +153,25 @@ local germanStrings = {
     CC_GOOD_EMBER_TEXT_2  = "Schließt eine Hochinsel Gewölbe-Quest ab",
     CC_GOOD_EMBER_TEXT_3  = "Verkauft einen gestohlenen Gegenstand von lila Qualität an einen Hehler",
     CC_GOOD_EMBER_TEXT_4  = "Flieht erfolgreich vor einer Stadtwachen, nachdem diese Euch gestellt hat", -- TODO
-    CC_GOOD_EMBER_TEXT_5  = "Wählt die Option 'Herausreden', nachdem Euch eine Stadtwache gestellt hat (erfordert die passive Diebesgilden-Fertigkeit 'Nachsicht')",
+    CC_GOOD_EMBER_TEXT_5  =
+    "Wählt die Option 'Herausreden', nachdem Euch eine Stadtwache gestellt hat (erfordert die passive Diebesgilden-Fertigkeit 'Nachsicht')",
     CC_GOOD_EMBER_TEXT_6  = "Gewinnt bei einer Partie Ruhmesgeschichten",
     CC_GOOD_EMBER_TEXT_7  = "Begeht Taschendiebstahl bei einer Wache",
-    CC_GOOD_EMBER_TEXT_8  = "Erbeutet eine Wertkassette oder Diebesgut", --10:35 -10:47 - 11:35 > 10
+    CC_GOOD_EMBER_TEXT_8  = "Erbeutet eine Wertkassette oder Diebesgut",      --10:35 -10:47 - 11:35 > 10
     CC_GOOD_EMBER_TEXT_9  = "Schließt eine Quest vom Brett für Aufträge im Diebesnest in Abahs Landung ab.",
-    CC_GOOD_EMBER_TEXT_10 = "Verwendet einen Gefälschten Begnadigungserlass",  -- 2:44 4:53 ( <2 hours )   4:53 - 5:41 (>1 hour) (Probs 2 hours)
+    CC_GOOD_EMBER_TEXT_10 = "Verwendet einen Gefälschten Begnadigungserlass", -- 2:44 4:53 ( <2 hours )   4:53 - 5:41 (>1 hour) (Probs 2 hours)
     CC_GOOD_EMBER_TEXT_11 = "Erntet einen Runenstein",
     CC_GOOD_EMBER_TEXT_12 = "Tötet Wölfe",
     CC_GOOD_EMBER_TEXT_13 = "Tötet Werwölfe",
-    CC_GOOD_EMBER_TEXT_14 = "Flieht erfolgreich vor einer Stadtwache, nachdem diese Euch gestellt hat", -- TODO
-    CC_GOOD_EMBER_TEXT_15 = "Verkauft einen Gegenstand von lila Qualität an einen beliebigen NSC-Händler",                                -- TODO
+    CC_GOOD_EMBER_TEXT_14 = "Flieht erfolgreich vor einer Stadtwache, nachdem diese Euch gestellt hat",    -- TODO
+    CC_GOOD_EMBER_TEXT_15 = "Verkauft einen Gegenstand von lila Qualität an einen beliebigen NSC-Händler", -- TODO
     CC_GOOD_EMBER_TEXT_16 = "Betretet einen Diebesunterschlupf oder das Diebesnest in Abahs Landung",
-    CC_GOOD_EMBER_TEXT_17 = "Dringt unbefugt in einen nicht-öffentlichen Bereich ein",                                              -- TODO
+    CC_GOOD_EMBER_TEXT_17 = "Dringt unbefugt in einen nicht-öffentlichen Bereich ein",                     -- TODO
     CC_GOOD_EMBER_TEXT_18 = "Beschwört das 'Fuchsrote Großohrkätzchen' (friedlicher Begleiter)",
 
     -- Bad
-    CC_BAD_EMBER_TEXT_1   = "Werdet beim Stehlen, beim Taschendiebstahl oder beim Mord/Angriff auf einen unschuldigen NSC erwischt",
+    CC_BAD_EMBER_TEXT_1   =
+    "Werdet beim Stehlen, beim Taschendiebstahl oder beim Mord/Angriff auf einen unschuldigen NSC erwischt",
     CC_BAD_EMBER_TEXT_2   = "Zahlt freiwillig Kopfgeld an eine Stadtwache, nachdem diese Euch gestellt hat",
     CC_BAD_EMBER_TEXT_3   = "Werdet beim unbefugten Eindringen in einen nicht-öffentlichen Bereich erwischt",
     CC_BAD_EMBER_TEXT_4   = "Werdet von einer Wache getötet",
@@ -196,7 +200,7 @@ local germanStrings = {
     -- Bad
     CC_BAD_SHARP_TEXT_1 = "Benutzt einen Monturtisch",
     CC_BAD_SHARP_TEXT_2 = "Zahlt freiwillig Kopfgeld an eine Stadtwache, nachdem diese Euch gestellt hat",
-    CC_BAD_SHARP_TEXT_3 = "Begeht Taschendiebstahl bei einem Bettler",               -- > 20
+    CC_BAD_SHARP_TEXT_3 = "Begeht Taschendiebstahl bei einem Bettler",    -- > 20
     CC_BAD_SHARP_TEXT_4 = "Zerstört einen Gegenstand aus Eurem Inventar", -- > 20
     CC_BAD_SHARP_TEXT_5 = "Lasst Eure Ausrüstung kaputt gehen",
 
@@ -213,7 +217,8 @@ local germanStrings = {
     CC_GOOD_AZANDAR_TEXT_6                    = "Aktiviert einen Ayleïdenbrunnen ",
     CC_GOOD_AZANDAR_TEXT_7                    = "Lest ein Buch",
     CC_GOOD_AZANDAR_TEXT_8                    = "Stellt Tee her",
-    CC_GOOD_AZANDAR_TEXT_9                    = "Tötet Schlammkrabben, Dreugh, Chaurus, Oger, Trolle, Harpyien, Nixochsen, oder Dünenbrecher",
+    CC_GOOD_AZANDAR_TEXT_9                    =
+    "Tötet Schlammkrabben, Dreugh, Chaurus, Oger, Trolle, Harpyien, Nixochsen, oder Dünenbrecher",
     CC_GOOD_AZANDAR_TEXT_16                   = "Schließt eine tägliche Quest für Ordinatorin Tilena in Nekrom ab",
     CC_GOOD_AZANDAR_TEXT_18                   = "Besucht die Messingfeste, die Leere Stadt, oder den Stadtkern von Ferngrab",
     CC_GOOD_AZANDAR_TEXT_19                   = "Schließt ein Portal ins Reich des Vergessens ab",
@@ -239,9 +244,11 @@ local germanStrings = {
     CC_SETTINGS_NOTIFICATION_TOOLTIP          = "Sollte die Erinnerung auf Eurem Bildschirm angezeigt werden?",
     CC_SETTINGS_OTHER_SECTION                 = "Andere Optionen",
     CC_SETTINGS_OTHER_TIMER_S_NAME            = "Benachrichtigung bei Timer-Start",
-    CC_SETTINGS_OTHER_TIMER_S_TOOLTIP         = "Wenn Ihr einen Timer startet, soll eine Nachricht an Euren Chat gesendet werden?",
+    CC_SETTINGS_OTHER_TIMER_S_TOOLTIP         =
+    "Wenn Ihr einen Timer startet, soll eine Nachricht an Euren Chat gesendet werden?",
     CC_SETTINGS_OTHER_TIMER_R_NAME            = "Benachrichtigung beim Beenden des Timers",
-    CC_SETTINGS_OTHER_TIMER_R_TOOLTIP         = "Wenn Ihr einen Timer beendet, soll eine Nachricht an Euren Chat gesendet werden?",
+    CC_SETTINGS_OTHER_TIMER_R_TOOLTIP         =
+    "Wenn Ihr einen Timer beendet, soll eine Nachricht an Euren Chat gesendet werden?",
     CC_SETTINGS_OTHER_COUNTDOWN_NAME          = "Countdowns anzeigen",
     CC_SETTINGS_OTHER_COUNTDOWN_TOOLTIP       = "Zeigt die verbleibende Zeit bis zu einer Benachrichtigung an.",
 
@@ -258,5 +265,5 @@ local germanStrings = {
 }
 
 for id, val in pairs(germanStrings) do
-    SafeAddString(_G[id], val, 1)
+    SafeAddString(_G[id], val, 2)
 end
