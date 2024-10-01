@@ -146,8 +146,11 @@ end
 
 ---Reset the rapport ui object so it can be used again.
 function CC_RapportObject:Reset()
-    self.control:SetHidden(true)
     self:SetTimer("")
+    self:SetTitle("")
+    self.bulletList:Clear()
+    self.control:SetHidden(true)
+    self.control:SetDimensions(550, nil)
     self:ShowTimerButton()
     self:SetTimerButtonText(GetString(CC_REMINDER_BTN))
 end
