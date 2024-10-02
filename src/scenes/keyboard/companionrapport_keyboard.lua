@@ -20,7 +20,6 @@ function CC_RapportObject:Initialize(control)
 
     self.title      = control:GetNamedChild("Title")
     self.icon       = control:GetNamedChild("Icon")
-    self.points     = control:GetNamedChild("Points")
     self.timer      = control:GetNamedChild("Countdown")
     self.timerBtn   = control:GetNamedChild("ReminderBtn")
 
@@ -63,6 +62,9 @@ function CC_RapportObject:Build()
     elseif self.rapportStatus == RAPPORT_STATS.BAD then
         self.icon:SetTexture("EsoUI/Art/HUD/lootHistory_icon_rapportDecrease_generic.dds")
     end
+
+    local height = self.bulletList.height + self.title:GetHeight() + 50
+    self.control:SetHeight(math.max(100, height))
 end
 
 ---Sets the ui rapport title
@@ -149,8 +151,8 @@ function CC_RapportObject:Reset()
     self:SetTimer("")
     self:SetTitle("")
     self.bulletList:Clear()
+    self.control:ClearAnchors()
     self.control:SetHidden(true)
-    self.control:SetDimensions(550, nil)
     self:ShowTimerButton()
     self:SetTimerButtonText(GetString(CC_REMINDER_BTN))
 end
@@ -374,8 +376,9 @@ function CC_CompanionRapport_Keyboard:BuildRapportList()
 
     local previous
     for _, rapportData in ipairs(companionRapportList) do
-        local poolObject             = self.rapportPool:AcquireObject()
-        local interactionId          = rapportData.id
+        local poolObject    = self.rapportPool:AcquireObject()
+        local interactionId = rapportData.id
+        poolObject:Reset()
 
         -- Get a list of rapport items and their respective timers
         local rapportList, timerList = CC_COMPANION_DATA_MANAGER:GetRapportTimeComponents(interactionId)

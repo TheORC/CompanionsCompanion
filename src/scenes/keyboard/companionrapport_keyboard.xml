@@ -9,7 +9,7 @@
             </Controls>
         </Label>
 
-        <Control name="CC_RapportPanelTemplate" inherits="ZO_ScrollContainer" tier="HIGH" resizeToFitDescendents="true" virtual="true">
+        <Control name="CC_RapportPanelTemplate" inherits="ZO_ScrollContainer" tier="HIGH" virtual="true">
             <Dimensions x="550" />
 
             <Controls>
